@@ -1,0 +1,13 @@
+build*/
+work/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.o
+*.a
+*.so
+*.cubin
+*.ptx
+*.bin
+*.log
+configs/local.*
