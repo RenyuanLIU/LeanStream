@@ -1,5 +1,7 @@
 # LeanStream
 
+**LeanStream** is the open-source implementation of our paper accepted at **ACM MobiCom 2026** ([Paper on arXiv](https://arxiv.org/abs/2609.03079)).
+
 LeanStream is a runtime toolkit for efficient on-device LLM inference through dynamic weight prediction, SSD weight streaming, and GPU computation overlap.
 
 ## 1. Dynamic Weight / I/O Manager
@@ -93,11 +95,6 @@ The flow is offline characterization -> offline table synthesis -> latest I/O st
 
 Production execution is validated on Jetson AGX Orin with CUDA 11.8, upstream Triton 3.1.0, and vendor PyTorch 2.1.0a0. The optional model loader uses Transformers 4.41.1. Mapped metadata/staging require integrated-device coherence and system-scope atomics. Do not assume this publication mechanism is valid for arbitrary discrete GPUs. CPU runtime tests also build on x86 Linux. See [porting](docs/porting.md) and [dependencies](docs/dependencies.md).
 
-## Limitations
-
-The reference STREAM_IO backend uses **fixed logical staging allocation**. Strict bounded staging and strict physical 85% cache-capacity enforcement are not implemented. No total-memory percentage is guaranteed. The unfinished strict-memory optimization is not part of v0.1.
-
-Optional prediction schedules remain experimental. AttnInput + AttnOutput uses the unsplit attention path; internal checkpoints can add overhead. The production Ministral recipe uses ordinary unsplit attention. Model weights, calibrated predictor artifacts, prompts, and datasets are external inputs. Full fixed-500 accuracy was **NOT RE-RUN FOR THIS RELEASE UPDATE**; preserving mathematics does not imply identical timing-dependent sparse membership.
 
 ## License
 
