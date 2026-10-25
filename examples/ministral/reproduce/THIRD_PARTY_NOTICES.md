@@ -8,11 +8,13 @@ Model-derived data and CoQA contents are not licensed by the project MIT license
 
 ## Model-derived artifacts
 
-The supported checkpoint is [cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit](https://huggingface.co/cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit/tree/e3a799844ba08f27fddbf118e154057eb0105889), pinned to revision `e3a799844ba08f27fddbf118e154057eb0105889`. Its model card identifies `mistralai/Ministral-3-8B-Instruct-2512` as its base and declares Apache-2.0. The Apache-2.0 text is included in `notices/Apache-2.0.txt` and in the artifact collection as `LICENSES/Apache-2.0.txt`.
+The supported checkpoint is [cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit](https://huggingface.co/cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit/tree/e3a799844ba08f27fddbf118e154057eb0105889), pinned to revision `e3a799844ba08f27fddbf118e154057eb0105889`. Its model card credits Ton Cao (cyankiwi) for the quantized checkpoint, identifies Mistral AI's `mistralai/Ministral-3-8B-Instruct-2512` as its base, and declares Apache-2.0. The Apache-2.0 text is included in `notices/Apache-2.0.txt` and in the artifact collection as `LICENSES/Apache-2.0.txt`.
 
 LeanStream's Group2 packed MLP files are reordered and requantized signed INT4/per-128 derivatives, with gate/up/down rows and predictor-dependent physical ordering. The individual-neuron baseline packed storage is also derived. These files are not unchanged upstream tensors. Preserve their identities, this modification attribution, applicable upstream notices and the Apache-2.0 license when distributing them. The upstream checkpoint remains a separate pinned download.
 
 The project authors created the full/P1-lite calibrated predictor parameters and fixed-hot artifacts. Public distribution permission and the applicable artifact license still require explicit approval; source-code MIT licensing is not an automatic grant for these data files.
+
+`metadata/predictor_capture.json` binds calibration records 0 and 1 to the historical CoQA documents; `coqa_selection.json` identifies both as MCTest records. The [original MCTest MSR-LA](https://github.com/mcobzarenco/mctest/blob/master/data/MCTest/LICENSE.pdf) includes same-terms requirements for redistributed data derivatives. Whether those requirements apply to the calibrated parameters/fixed-hot artifacts requires a rights determination before assigning their public artifact license. Project ownership and omission of raw passages do not by themselves resolve that question. No claim is made here that learned parameters are necessarily data derivatives, or that they are exempt.
 
 ## Dataset inputs
 
