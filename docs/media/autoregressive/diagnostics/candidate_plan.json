@@ -1,0 +1,39 @@
+{
+  "description": "Six author-written medium-length generation prompts declared before any outputs. No training, refit, prompt replacement or token editing. Target 40\u201364 tokens; actual EOS honored.",
+  "greedy": true,
+  "seed": 42,
+  "max_new_tokens": 64,
+  "eos": 2,
+  "prompts": [
+    {
+      "id": "seed_story",
+      "text": "A child plants a bean seed in a pot, waters it, and places it beside a sunny window. Describe what happens over the next two weeks and why. Write about 45 words.\n\nAnswer:",
+      "expected_keyword": null
+    },
+    {
+      "id": "library_visit",
+      "text": "Mina visits a library to find a book about ocean animals. Describe how she finds the book, borrows it, and reads it at home. Write a short, clear paragraph of about 45 words.\n\nAnswer:",
+      "expected_keyword": null
+    },
+    {
+      "id": "sandwich",
+      "text": "Explain how to make a simple cheese and tomato sandwich, from washing the tomato to serving the sandwich. Use a short paragraph of about 45 words.\n\nAnswer:",
+      "expected_keyword": null
+    },
+    {
+      "id": "rainy_walk",
+      "text": "Sam takes an umbrella on a rainy walk to school. Describe how the umbrella helps and what Sam does with it after arriving. Write about 45 words.\n\nAnswer:",
+      "expected_keyword": null
+    },
+    {
+      "id": "bicycle_check",
+      "text": "Explain why someone should check bicycle tires and brakes before a ride. Give a simple explanation for a child in about 45 words.\n\nAnswer:",
+      "expected_keyword": null
+    },
+    {
+      "id": "photo_story",
+      "text": "A family takes a photograph during a picnic beside a lake. Describe the scene and explain why they might keep the photograph. Write a clear paragraph of about 45 words.\n\nAnswer:",
+      "expected_keyword": null
+    }
+  ]
+}

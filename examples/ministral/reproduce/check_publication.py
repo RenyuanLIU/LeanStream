@@ -95,8 +95,15 @@ def extract_source(archive,output):
             require(str(relative) not in seen and member.size<=10<<20,'Duplicate/oversized source member');seen.add(str(relative))
             total+=member.size;require(total<=256<<20,'Source archive expands beyond limit')
             target.parent.mkdir(parents=True,exist_ok=True)
+            if target.exists():
+                require(target.is_file() and target.stat().st_size==member.size,'Existing source member differs')
+                digest=hashlib.sha256()
+                with tar.extractfile(member) as src:
+                    for block in iter(lambda:src.read(1<<20),b''):digest.update(block)
+                require(sha(target)==digest.hexdigest(),'Existing source checksum differs');continue
             with tar.extractfile(member) as src,target.open('xb') as dest:
                 for block in iter(lambda:src.read(1<<20),b''):dest.write(block)
+    require({str(f.relative_to(output)) for f in output.rglob('*') if f.is_file() or f.is_symlink()}==seen,'Unexpected files in source acceptance tree')
     require(all((output/name).is_file() for name in REQUIRED),'Tagged source lacks required runtime/reproduction files')
     forbidden={'RELEASE_CHECKLIST.md','FINAL_AUDIT.json','AGENT_REPORT.md','IMPLEMENTATION_LOG.md'}
     require(not any(p.name in forbidden for p in output.rglob('*')),'Tagged source contains internal release records')
@@ -130,8 +137,8 @@ def verify_source_basis(repository,commit,manifest,api=request_json):
 
 def anonymous_environment(source,output):
     env=dict(os.environ)
-    for name in ['GH_TOKEN','GITHUB_TOKEN','GH_ENTERPRISE_TOKEN','GITHUB_ENTERPRISE_TOKEN','HF_TOKEN','HUGGING_FACE_HUB_TOKEN','HF_HUB_OFFLINE','TRANSFORMERS_OFFLINE']:env.pop(name,None)
-    env.update(PYTHONPATH=str(source),PYTHONDONTWRITEBYTECODE='1',HF_HOME=str(output/'hf-cache'),HF_HUB_DISABLE_IMPLICIT_TOKEN='1',USE_TF='0')
+    for name in ['GH_TOKEN','GITHUB_TOKEN','GH_ENTERPRISE_TOKEN','GITHUB_ENTERPRISE_TOKEN','HF_TOKEN','HUGGING_FACE_HUB_TOKEN','HF_HUB_OFFLINE','TRANSFORMERS_OFFLINE','HF_HUB_CACHE','HUGGINGFACE_HUB_CACHE','HF_TOKEN_PATH','TRANSFORMERS_CACHE']:env.pop(name,None)
+    env.update(PYTHONPATH=str(source),PYTHONDONTWRITEBYTECODE='1',HF_HOME=str(output/'hf-cache'),HF_HUB_DISABLE_IMPLICIT_TOKEN='1',HF_HUB_DISABLE_XET='1',USE_TF='0')
     return env
 
 def read_sums(path):
@@ -147,11 +154,18 @@ def verify_sums(path,cache,expected):
     for name,item in expected.items():require(entries[name]==item['sha256'] and (cache/name).stat().st_size==item['size'] and sha(cache/name)==entries[name],'Checksum mismatch: '+name)
 
 def run(repository,tag,output):
-    output=output.resolve();output.mkdir(parents=True,exist_ok=False)
+    output=output.resolve()
+    if output.exists():
+        marker=output/'publication_check.json'
+        require(marker.is_file(),'Refusing to reuse an unknown existing output directory')
+        previous=json.loads(marker.read_text());require(previous.get('repository')==repository and previous.get('tag')==tag and previous.get('anonymous') is True,'Existing acceptance output identity differs')
+    else:output.mkdir(parents=True,exist_ok=False)
     report=dict(status='INCOMPLETE',repository=repository,tag=tag,anonymous=True,checks={})
     try:
         report['stage']='public repository, source tag and published Release'
-        commit,release,assets=public_metadata(repository,tag,checks=report['checks']);report.update(source_commit=commit,release_id=release['id']);report['checks']['public_repository_tag_release']='PASS'
+        commit,release,assets=public_metadata(repository,tag,checks=report['checks'])
+        if 'previous' in locals() and previous.get('source_commit'):require(previous['source_commit']==commit,'Source tag moved since previous acceptance attempt')
+        report.update(source_commit=commit,release_id=release['id']);report['checks']['public_repository_tag_release']='PASS'
         report['stage']='tagged source and manifest approval'
         source=output/'source';fetch_file(f'https://api.github.com/repos/{repository}/tarball/{commit}',output/'source.tar.gz',64<<20);extract_source(output/'source.tar.gz',source)
         manifest,expected=approved_manifest(source,repository,tag,assets);verify_source_basis(repository,commit,manifest);report['checks']['tagged_source_and_supported_basis']='PASS'

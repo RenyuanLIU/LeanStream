@@ -39,3 +39,6 @@ optional Hugging Face/tokenizers/scoring dependencies; generic CPU builds do not
 import or download them. Production kernels are included in backends/triton/.
 The default One-shot uses its distinct downloaded1638-feature early-input W4A8
 parameters. No training or model conversion is part of the reproduction workflow.
+
+The complete v2 run additionally verified tokenizers0.19.1 and huggingface-hub0.23.1.
+The observed vendor torch build was2.1.0a0+41361538.nv23.6.

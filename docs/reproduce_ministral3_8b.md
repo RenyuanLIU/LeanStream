@@ -1,12 +1,12 @@
-# Reproduce Ministral-3 8B with LeanStream v2
+# Reproduce Ministral-3 8B (asset collection v2)
 
 This optional application consumes the model-independent LeanStream I/O, GPU and
 predictor components. Generic CMake/CPU builds need no model, dataset or downloads.
 
 ## Hardware and software
 
-Validated: NVIDIA Jetson AGX Orin, SM87; CUDA11.8, vendor PyTorch2.1.0a0,
-Triton3.1.0, Transformers4.41.1, NumPy1.24.4, safetensors0.4.2. Also install
+Validated: NVIDIA Jetson AGX Orin, SM87; CUDA 11.8, vendor PyTorch 2.1.0a0,
+Triton 3.1.0, Transformers 4.41.1, NumPy 1.24.4, safetensors 0.4.2. Also install
 `tokenizers`, `huggingface_hub`, `sentencepiece`, CMake, a C++17 compiler, OpenMP,
 CUDA headers/driver and pthreads. Use the vendor's matching Jetson PyTorch build;
 do not replace system CUDA/PyTorch automatically. Pillow and DejaVu Sans Mono are
@@ -111,7 +111,22 @@ exact SSD request count. Predictor overhead is reported only where exposed.
 
 Historical pooled v1 results were Block2.831, original512-feature One-shot3.281,
 LeanStream8.877 tokens/s. These are historical, not v2-default measurements.
-New v2 results are recorded separately in the Release validation results.
+New v2 matched measurements on Jetson AGX Orin (CPU min/max2201600kHz, MAXN):
+
+| Method | Decode calls | ms/token | tokens/s |
+|---|---:|---:|---:|
+| Block |230|355.527|2.813|
+| One-shot (recalibrated default) |256|321.620|3.109|
+| LeanStream |253|111.371|8.979|
+
+These pool the actual forward/reverse decode wall times and EOS-dependent counts.
+[Machine-readable results](../examples/ministral/reproduce/validated_results_v2.json)
+retain both directions, source/native identities and storage accounting. Baseline
+native SSD bytes/requests were94506774528/15381962 for Block and
+103626620928/16866312 for One-shot. LeanStream process read_bytes was21813055488
+and process read syscalls1775183 (includes small accounting reads; not a native
+SSD-request counter). Predictor time is included in E2E; separate native predictor
+timing is not exposed in this build. No historical value or GIF rate was substituted.
 
 For baseline numerical tests use the smoke command with `--method block` or
 `--method one-shot`; original rtol=.02/atol=.002 are unchanged. These tests validate
@@ -128,7 +143,7 @@ python3 -m examples.ministral.reproduce.reproduce_accuracy \
   --output /data/results/accuracy
 ```
 
-This evaluates LeanStream only, using the original fixed500 IDs/order/prompt bytes,
+This evaluates LeanStream only, using the final questions of the original500 conversations (not the official all-turn leaderboard protocol), with the original fixed500 IDs/order/prompt bytes,
 greedy seed42, max64, EOS2, original per-prompt reset/warmup/cold binding, exact
 historical CoQA scorer and multi-reference normalization. prepare_coqa downloads
 the original licensed public dataset and reconstructs all four benchmark files to
@@ -142,7 +157,7 @@ EM62.3167% and Original F179.0064% /EM62.8% are historical, not same-session con
 Previous public v1 F178.6953% /EM62.4167% is separately historical.
 
 The recalibrated One-shot was fitted using positions from fixed500 input records0
-and1. These samples were NOT held out from that evaluation set. No One-shot
+and1. These samples were NOT held out from that evaluation set. The original predictor capture metadata also records historical calibration inputs; this reproduces that protocol, not a wholly held-out calibration dataset. No One-shot
 fixed500 score is claimed here. The predictor improves some prompts but still has
 serious free-generation failures. Dense/sparse training distribution shift and
 missing early Attention context remain limitations; do not modify scoring rules
@@ -180,3 +195,7 @@ fresh Jetson build/smoke above. Keep logs outside source. On checksum errors ins
 the file rather than regenerating assets. On O_DIRECT errors use supported local
 NVMe/alignment. On missing sm87 kernels use the matching compiler/environment.
 Never copy private prebuilt libraries or change numerical tolerances to pass.
+
+## Public v2 accuracy validation
+
+The same-session LeanStream run completed all 500 records: F1 **78.4949%**, EM **61.7833%**. Relative to historical Progressive, the differences are +0.0628 and −0.5333 percentage points. All records aligned, none were missing, logits were finite, and the original scorer was used. The EM difference slightly exceeds the preferred 0.5-point comparison threshold; this timing-dependent run is reported without changing scoring or runtime behavior. These are LeanStream results, not a full-500 evaluation of the new One-shot predictor. See [`validated_results_v2.json`](../examples/ministral/reproduce/validated_results_v2.json) for measured performance, storage counters and validation provenance.

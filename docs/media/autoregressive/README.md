@@ -35,7 +35,8 @@ The six medium-length prompts were declared before their outputs. This Library
 prompt was selected for a readable One-shot answer without a serious loop. The
 method still failed other prompts (Sandwich degeneration and Seed incoherence),
 and LeanStream also looped on several probes. This animation is not a universal
-quality claim. Historical diagnostic tools/data remain under ../diagnostics/.
+quality claim. [All18 unedited outputs](diagnostics/ALL_CANDIDATE_OUTPUTS.md),
+[predeclared prompts](diagnostics/candidate_plan.json), and [manual assessments](diagnostics/candidate_analysis.json) retain successful and failed cases; raw IDs/feedback/timestamps are in the diagnostics/demo_* directories. Historical diagnostic tools/data remain under ../diagnostics/.
 
 ## Capture and render with the public default
 

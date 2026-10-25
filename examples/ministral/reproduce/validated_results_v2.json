@@ -1,0 +1,418 @@
+{
+  "status": "COMPLETE",
+  "validated_inference_source_base": "f0909037d09731977c14888c120c7d77fed57ad4",
+  "asset_version": "leanstream-ministral3-8b-v2",
+  "performance": {
+    "status": "COMPLETE",
+    "results": [
+      {
+        "method": "block",
+        "decode_tokens": 230,
+        "total_decode_ms": 81771.19786999996,
+        "ms_per_token": 355.5269472608694,
+        "tokens_per_s": 2.812726314290449,
+        "directions": [
+          {
+            "status": "PASS",
+            "method": "block",
+            "direction": "forward",
+            "decode_tokens": 115,
+            "total_decode_ms": 40784.78039499998,
+            "ms_per_token": 354.6502643043477,
+            "tokens_per_s": 2.8196792746271218,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              0,
+              2,
+              5,
+              6,
+              7,
+              8,
+              9,
+              11
+            ]
+          },
+          {
+            "status": "PASS",
+            "method": "block",
+            "direction": "reverse",
+            "decode_tokens": 115,
+            "total_decode_ms": 40986.41747499998,
+            "ms_per_token": 356.40363021739114,
+            "tokens_per_s": 2.8058075597884407,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              11,
+              9,
+              8,
+              7,
+              6,
+              5,
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "method": "one-shot",
+        "decode_tokens": 256,
+        "total_decode_ms": 82334.809317,
+        "ms_per_token": 321.6203488945313,
+        "tokens_per_s": 3.1092560014849346,
+        "directions": [
+          {
+            "status": "PASS",
+            "method": "one-shot",
+            "direction": "forward",
+            "decode_tokens": 128,
+            "total_decode_ms": 41113.476267000005,
+            "ms_per_token": 321.19903333593754,
+            "tokens_per_s": 3.1133344008358645,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              0,
+              2,
+              5,
+              6,
+              7,
+              8,
+              9,
+              11
+            ]
+          },
+          {
+            "status": "PASS",
+            "method": "one-shot",
+            "direction": "reverse",
+            "decode_tokens": 128,
+            "total_decode_ms": 41221.33305000001,
+            "ms_per_token": 322.04166445312507,
+            "tokens_per_s": 3.1051882733811778,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              11,
+              9,
+              8,
+              7,
+              6,
+              5,
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "method": "leanstream",
+        "decode_tokens": 253,
+        "total_decode_ms": 28176.856853000005,
+        "ms_per_token": 111.37097570355733,
+        "tokens_per_s": 8.979000082227516,
+        "directions": [
+          {
+            "status": "PASS",
+            "method": "leanstream",
+            "direction": "forward",
+            "decode_tokens": 125,
+            "total_decode_ms": 13724.478781,
+            "ms_per_token": 109.795830248,
+            "tokens_per_s": 9.107814001144325,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              0,
+              2,
+              5,
+              6,
+              7,
+              8,
+              9,
+              11
+            ]
+          },
+          {
+            "status": "PASS",
+            "method": "leanstream",
+            "direction": "reverse",
+            "decode_tokens": 128,
+            "total_decode_ms": 14452.378072000005,
+            "ms_per_token": 112.90920368750004,
+            "tokens_per_s": 8.856673923303102,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              11,
+              9,
+              8,
+              7,
+              6,
+              5,
+              2,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "historical_only_tokens_per_s": {
+      "block": 2.9,
+      "one_shot": 3.2,
+      "leanstream": 9.0
+    }
+  },
+  "methods": {
+    "block": {
+      "software": {
+        "torch": "2.1.0a0+41361538.nv23.6",
+        "triton": "3.1.0",
+        "transformers": "4.41.1",
+        "numpy": "1.24.4",
+        "safetensors": "0.4.2",
+        "tokenizers": "0.19.1",
+        "huggingface-hub": "0.23.1"
+      },
+      "cuda_device": {
+        "name": "Orin",
+        "capability": [
+          8,
+          7
+        ],
+        "total_memory_bytes": 32019165184
+      },
+      "power_mode": "NV Power Mode: MAXN\n0\nNVPM ERROR: Error opening /sys/kernel/nvpmodel_emc_cap/emc_iso_cap: 13\nNVPM ERROR: failed to read PARAM EMC: ARG MAX_FREQ: PATH /sys/kernel/nvpmodel_emc_cap/emc_iso_cap",
+      "clocks": {
+        "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq": "2201600",
+        "/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq": "2201600",
+        "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq": "2201600",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/min_freq": "1300500000",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/cur_freq": "1300500000",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/max_freq": "1300500000",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/target_freq": "1300500000"
+      },
+      "native_library_sha256": {
+        "libtriton_mapped.so": "6db54dfc08db76ef6e9031d8f6713070afcb49c9b74f88cdb6643c444917b890",
+        "libfixed_cache.so": "92820e99f0856bf8d706a9052d319d8551c0d9e7fe1194be5ddc7272b95e45dd"
+      },
+      "runtime_module_origins": {
+        "backends.triton": "backends/triton/__init__.py",
+        "backends.triton.core": "backends/triton/core.py",
+        "backends.triton.mapped": "backends/triton/mapped.py",
+        "backends.triton.primitives": "backends/triton/primitives.py",
+        "baselines.block": "examples/ministral/reproduce/baselines/block.py",
+        "baselines.fixed_cache": "examples/ministral/reproduce/baselines/fixed_cache.py",
+        "baselines.one_shot": "examples/ministral/reproduce/baselines/one_shot.py",
+        "baselines.recalibrated": "examples/ministral/reproduce/baselines/recalibrated.py",
+        "python.attention_decode_kernels": "examples/ministral/python/attention_decode_kernels.py",
+        "python.attention_refine": "examples/ministral/python/attention_refine.py",
+        "python.ministral3_text_loader": "examples/ministral/python/ministral3_text_loader.py",
+        "python.predictor_cpu_native": "examples/ministral/python/predictor_cpu_native.py",
+        "scripts.triton_split_probe": "examples/ministral/scripts/triton_split_probe.py"
+      },
+      "one_shot_predictor_manifest_sha256": null,
+      "storage": {
+        "native_ssd_bytes": 94506774528,
+        "native_ssd_requests": 15381962,
+        "process_read_bytes": 94506774528,
+        "process_read_syscalls": 15381994
+      },
+      "storage_scope": "Process-wide decode plus final drain; syscall counts include accounting/host reads, not exclusively SSD requests",
+      "fixed_hot_immutable": true,
+      "native_geometry_verified": null,
+      "predictor_overhead": "Not separately exposed by unchanged native baseline; included in end-to-end timing"
+    },
+    "one-shot": {
+      "software": {
+        "torch": "2.1.0a0+41361538.nv23.6",
+        "triton": "3.1.0",
+        "transformers": "4.41.1",
+        "numpy": "1.24.4",
+        "safetensors": "0.4.2",
+        "tokenizers": "0.19.1",
+        "huggingface-hub": "0.23.1"
+      },
+      "cuda_device": {
+        "name": "Orin",
+        "capability": [
+          8,
+          7
+        ],
+        "total_memory_bytes": 32019165184
+      },
+      "power_mode": "NV Power Mode: MAXN\n0\nNVPM ERROR: Error opening /sys/kernel/nvpmodel_emc_cap/emc_iso_cap: 13\nNVPM ERROR: failed to read PARAM EMC: ARG MAX_FREQ: PATH /sys/kernel/nvpmodel_emc_cap/emc_iso_cap",
+      "clocks": {
+        "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq": "2201600",
+        "/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq": "2201600",
+        "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq": "2201600",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/min_freq": "1300500000",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/cur_freq": "1300500000",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/max_freq": "1300500000",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/target_freq": "1300500000"
+      },
+      "native_library_sha256": {
+        "libtriton_mapped.so": "6db54dfc08db76ef6e9031d8f6713070afcb49c9b74f88cdb6643c444917b890",
+        "libfixed_cache.so": "92820e99f0856bf8d706a9052d319d8551c0d9e7fe1194be5ddc7272b95e45dd"
+      },
+      "runtime_module_origins": {
+        "backends.triton": "backends/triton/__init__.py",
+        "backends.triton.core": "backends/triton/core.py",
+        "backends.triton.mapped": "backends/triton/mapped.py",
+        "backends.triton.primitives": "backends/triton/primitives.py",
+        "baselines.block": "examples/ministral/reproduce/baselines/block.py",
+        "baselines.fixed_cache": "examples/ministral/reproduce/baselines/fixed_cache.py",
+        "baselines.one_shot": "examples/ministral/reproduce/baselines/one_shot.py",
+        "baselines.recalibrated": "examples/ministral/reproduce/baselines/recalibrated.py",
+        "python.attention_decode_kernels": "examples/ministral/python/attention_decode_kernels.py",
+        "python.attention_refine": "examples/ministral/python/attention_refine.py",
+        "python.ministral3_text_loader": "examples/ministral/python/ministral3_text_loader.py",
+        "python.predictor_cpu_native": "examples/ministral/python/predictor_cpu_native.py",
+        "scripts.triton_split_probe": "examples/ministral/scripts/triton_split_probe.py"
+      },
+      "one_shot_predictor_manifest_sha256": "79675b63fba7bd665460082e91dd359d28882afe02c45bfc1a2a970231ea2041",
+      "storage": {
+        "native_ssd_bytes": 103626620928,
+        "native_ssd_requests": 16866312,
+        "process_read_bytes": 103626620928,
+        "process_read_syscalls": 16866344
+      },
+      "storage_scope": "Process-wide decode plus final drain; syscall counts include accounting/host reads, not exclusively SSD requests",
+      "fixed_hot_immutable": true,
+      "native_geometry_verified": null,
+      "predictor_overhead": "Not separately exposed by unchanged native baseline; included in end-to-end timing"
+    },
+    "leanstream": {
+      "software": {
+        "torch": "2.1.0a0+41361538.nv23.6",
+        "triton": "3.1.0",
+        "transformers": "4.41.1",
+        "numpy": "1.24.4",
+        "safetensors": "0.4.2",
+        "tokenizers": "0.19.1",
+        "huggingface-hub": "0.23.1"
+      },
+      "cuda_device": {
+        "name": "Orin",
+        "capability": [
+          8,
+          7
+        ],
+        "total_memory_bytes": 32019165184
+      },
+      "power_mode": "NV Power Mode: MAXN\n0\nNVPM ERROR: Error opening /sys/kernel/nvpmodel_emc_cap/emc_iso_cap: 13\nNVPM ERROR: failed to read PARAM EMC: ARG MAX_FREQ: PATH /sys/kernel/nvpmodel_emc_cap/emc_iso_cap",
+      "clocks": {
+        "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq": "2201600",
+        "/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq": "2201600",
+        "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq": "2201600",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/min_freq": "1300500000",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/cur_freq": "1300500000",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/max_freq": "1300500000",
+        "/sys/devices/17000000.ga10b/devfreq/17000000.ga10b/target_freq": "1300500000"
+      },
+      "native_library_sha256": {
+        "libmapped.so": "145c8bd882ebbad6a8fc473f86e70922ba168e2a5d280d4607ad632f30e44b22",
+        "libtriton_mapped.so": "6db54dfc08db76ef6e9031d8f6713070afcb49c9b74f88cdb6643c444917b890",
+        "libpredictor.so": "4d430e945fb177e9ad838e6a802b2d978d5d15940e9ada135129b89490c86cf7"
+      },
+      "runtime_module_origins": {
+        "backends.triton": "backends/triton/__init__.py",
+        "backends.triton.binding": "backends/triton/binding.py",
+        "backends.triton.core": "backends/triton/core.py",
+        "backends.triton.mapped": "backends/triton/mapped.py",
+        "backends.triton.persistent": "backends/triton/persistent.py",
+        "backends.triton.primitives": "backends/triton/primitives.py",
+        "backends.triton.reduction": "backends/triton/reduction.py",
+        "pack.int4_format": "examples/ministral/pack/int4_format.py",
+        "python.attention_decode_kernels": "examples/ministral/python/attention_decode_kernels.py",
+        "python.attention_refine": "examples/ministral/python/attention_refine.py",
+        "python.g2_w4a8_runtime": "examples/ministral/python/g2_w4a8_runtime.py",
+        "python.leanstream_cuda_backend": "examples/ministral/python/leanstream_cuda_backend.py",
+        "python.ministral3_text_loader": "examples/ministral/python/ministral3_text_loader.py",
+        "python.predictor_cpu_native": "examples/ministral/python/predictor_cpu_native.py",
+        "python.split_async": "examples/ministral/python/split_async.py",
+        "python.storage": "examples/ministral/python/storage.py",
+        "python.triton_runtime_kernels": "examples/ministral/python/triton_runtime_kernels.py",
+        "python.triton_split_mlp": "examples/ministral/python/triton_split_mlp.py",
+        "python.triton_split_runtime": "examples/ministral/python/triton_split_runtime.py",
+        "python.two_stage_mapped": "examples/ministral/python/two_stage_mapped.py",
+        "python.v1_storage": "examples/ministral/python/v1_storage.py",
+        "scripts.predictor_shared_input": "examples/ministral/scripts/predictor_shared_input.py",
+        "scripts.triton_split_probe": "examples/ministral/scripts/triton_split_probe.py"
+      },
+      "one_shot_predictor_manifest_sha256": null,
+      "storage": {
+        "native_ssd_bytes": null,
+        "native_ssd_requests": null,
+        "process_read_bytes": 21813055488,
+        "process_read_syscalls": 1775183
+      },
+      "storage_scope": "Process-wide decode plus final drain; syscall counts include accounting/host reads, not exclusively SSD requests",
+      "fixed_hot_immutable": null,
+      "native_geometry_verified": true,
+      "predictor_overhead": "Not separately exposed by unchanged native baseline; included in end-to-end timing"
+    }
+  },
+  "accuracy_dry5": {
+    "status": "DRY_RUN_COMPLETE",
+    "n": 5,
+    "f1": 0.5833333333333333,
+    "em": 0.4,
+    "historical_progressive": {
+      "f1": 0.7843212061748897,
+      "em": 0.6231666666666666,
+      "same_session": false
+    },
+    "delta_percentage_points": null,
+    "validity": {
+      "aligned": true,
+      "missing": 0,
+      "original_scorer": true,
+      "finite_logits_checked": true
+    }
+  },
+  "accuracy_full500": {
+    "status": "COMPLETE",
+    "n": 500,
+    "f1": 0.7849492214855674,
+    "em": 0.6178333333333332,
+    "historical_progressive": {
+      "f1": 0.7843212061748897,
+      "em": 0.6231666666666666,
+      "same_session": false
+    },
+    "delta_percentage_points": {
+      "f1": 0.06280153106777986,
+      "em": -0.5333333333333412
+    },
+    "validity": {
+      "aligned": true,
+      "missing": 0,
+      "original_scorer": true,
+      "finite_logits_checked": true
+    }
+  },
+  "tests": {
+    "generic_cpp": 7,
+    "reproduction_python": 43,
+    "numerical_methods": [
+      "block",
+      "one-shot",
+      "leanstream"
+    ],
+    "native_build": "PASS",
+    "baseline_build": "PASS",
+    "leanstream_short_decode": "PASS"
+  },
+  "one_shot": {
+    "default": "recalibrated1638 early-normalized proxy",
+    "calibration_eval_overlap": [
+      0,
+      1
+    ],
+    "full500_accuracy": "NOT_RUN",
+    "universal_quality_claim": false
+  }
+}

@@ -112,7 +112,7 @@ The optional [reproduction guide](docs/reproduce_ministral3_8b.md) covers the pi
 
 The checksummed [v2 asset collection](https://github.com/RenyuanLIU/LeanStream/releases/tag/ministral3-8b-assets-v2) includes packed weights and all predictors, including the default recalibrated One-shot. Download the pinned upstream checkpoint separately; CoQA inputs are reconstructed locally under their original terms. No training, calibration, conversion or repacking is required.
 
-Historical v1 matched throughput (using the original512-feature One-shot) was Block **2.831**, One-shot **3.281**, LeanStream **8.877tokens/s** (approximately3.14× and2.71×). Completed public fixed-500 accuracy was **78.6953% F1 /62.4167% EM**. These are previous experiment results. [Full protocol and commands](examples/ministral/README.md).
+Historical v1 matched throughput (using the original512-feature One-shot) was Block **2.831**, One-shot **3.281**, LeanStream **8.877tokens/s** (approximately3.14× and2.71×). Historical LeanStream fixed-500 accuracy was **78.6953% F1 /62.4167% EM**. These are previous experiment results. [Current v2 measurements](examples/ministral/reproduce/validated_results_v2.json). [Full protocol and commands](examples/ministral/README.md).
 
 ## License
 

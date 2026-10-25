@@ -43,6 +43,9 @@ class Publication(unittest.TestCase):
                     member=tarfile.TarInfo('root/'+name);member.size=7;tar.addfile(member,io.BytesIO(b'fixture'))
             check.extract_source(archive,root/'source')
             self.assertTrue(all((root/'source'/name).read_bytes()==b'fixture' for name in check.REQUIRED))
+            check.extract_source(archive,root/'source') # Resume only byte-identical source.
+            (root/'source'/check.REQUIRED[0]).write_bytes(b'changed')
+            with self.assertRaises(ValueError):check.extract_source(archive,root/'source')
 
     def test_manifest_approval_and_attached_sizes(self):
         import archives

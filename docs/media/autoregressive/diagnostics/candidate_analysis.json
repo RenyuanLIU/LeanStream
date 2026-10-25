@@ -1,0 +1,1678 @@
+[
+  {
+    "method": "block",
+    "prompt_id": "seed_story",
+    "generated_tokens": 59,
+    "decode_calls": 58,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 392.55102924137935,
+    "tokens_per_s": 2.5474395059733768,
+    "ssd_read_requests": 4089896,
+    "ssd_bytes": 25128321024,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.0,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " The seed germs sprout, pushing roots toward roots, then roots grow downward. Roots begin to absorb water, sending nutrients to the stem. Leaves start to photosynthesize, growing leaves. Over two weeks, the stem grows taller, and the seed turns into a sprout.",
+    "human_review_status": "awkward",
+    "human_review_note": "Malformed wording, but no sustained loop."
+  },
+  {
+    "method": "block",
+    "prompt_id": "library_visit",
+    "generated_tokens": 64,
+    "decode_calls": 63,
+    "eos": false,
+    "token_cap": true,
+    "ms_per_decode": 367.1468998412699,
+    "tokens_per_s": 2.7237054171840596,
+    "ssd_read_requests": 4426510,
+    "ssd_bytes": 27196477440,
+    "max_same_token_run": 2,
+    "max_same_word_run": 2,
+    "repeated_word_trigram_fraction": 0.0,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " Mina searches the library’s card catalog using her phone app to find the book *Ocean Animals*. She picks it out, fills out the form, and hands it to the librarian. She then borrows it and checks it out using her library card card number. Finally, she takes the book home and reads it",
+    "human_review_status": "readable_capped",
+    "human_review_note": "Readable narrative with invented details and a repeated word; reaches64-token cap without EOS."
+  },
+  {
+    "method": "block",
+    "prompt_id": "sandwich",
+    "generated_tokens": 57,
+    "decode_calls": 56,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 364.8524712857143,
+    "tokens_per_s": 2.740833840253489,
+    "ssd_read_requests": 3979171,
+    "ssd_bytes": 24448026624,
+    "max_same_token_run": 2,
+    "max_same_word_run": 2,
+    "repeated_word_trigram_fraction": 0.0444444444444444,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " Start by wash the tomato and pat it with a paper towel. Spread spread spreadable cheese like cheese cheese on a slice of bread bread slices. Add a slice of tomato to sandwich. Assemble the sandwich with the tomato and bread sandwiches. Serve the sandwich cut sandwiches.",
+    "human_review_status": "degeneration",
+    "human_review_note": "Repeated spread/cheese/bread and malformed instructions; poor quality despite reaching EOS."
+  },
+  {
+    "method": "block",
+    "prompt_id": "rainy_walk",
+    "generated_tokens": 40,
+    "decode_calls": 39,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 360.04416076923076,
+    "tokens_per_s": 2.7774370728954745,
+    "ssd_read_requests": 2718338,
+    "ssd_bytes": 16701468672,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.0,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " The umbrella protects Sam from the rain, keeping her dry. It shields Sam’s umbrella from wind. After arriving, Sam carefully folds the umbrella and places it in her backpack for an efficient storage.",
+    "human_review_status": "inaccurate",
+    "human_review_note": "No sustained loop; contains a nonsensical umbrella claim."
+  },
+  {
+    "method": "block",
+    "prompt_id": "bicycle_check",
+    "generated_tokens": 48,
+    "decode_calls": 47,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 363.03240702127664,
+    "tokens_per_s": 2.7545750204647486,
+    "ssd_read_requests": 3324038,
+    "ssd_bytes": 20422889472,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.0,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " Before riding, checking tires and brakes helps keep you safe! Check tires have no punctures or cracks. Make sure brakes work by pushing the brakes should stop your wheel from moving. Always wear helmets and use brakes to stay safe!",
+    "human_review_status": "readable",
+    "human_review_note": "Some grammatical errors; no serious repetition."
+  },
+  {
+    "method": "block",
+    "prompt_id": "photo_story",
+    "generated_tokens": 62,
+    "decode_calls": 61,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 365.55159232786883,
+    "tokens_per_s": 2.735591968378255,
+    "ssd_read_requests": 4324531,
+    "ssd_bytes": 26569918464,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.0,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " The family gathers around a picturesque lake, adorned with vibrant autumn leaves, under a clear blue sky. They pose happily, capturing their cherished moment with smiles on their faces. They might keep the photograph to relive treasured memories and cherish the special moments they shared with each other.",
+    "human_review_status": "readable",
+    "human_review_note": "Coherent narrative; EOS."
+  },
+  {
+    "method": "calibrated1638",
+    "prompt_id": "seed_story",
+    "generated_tokens": 63,
+    "decode_calls": 62,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 330.5550833064516,
+    "tokens_per_s": 3.0252144060144985,
+    "ssd_read_requests": 4304473,
+    "ssd_bytes": 26446682112,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.0,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " The seed sproutts, germs, and begins to grow. Watering the pot regularly and providing it with sunlight and warmth, the seedling will sprout and grow into a plant. Over the next two weeks, the plant will grow and mature, and the pot will be returned to the pot.",
+    "human_review_status": "incoherent_ending",
+    "human_review_note": "Malformed opening and nonsensical ending about returning a pot; EOS, no sustained phrase loop."
+  },
+  {
+    "method": "calibrated1638",
+    "prompt_id": "library_visit",
+    "generated_tokens": 57,
+    "decode_calls": 56,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 332.8299814821429,
+    "tokens_per_s": 3.004537017809654,
+    "ssd_read_requests": 3897169,
+    "ssd_bytes": 23944206336,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.0,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " Mina searches the library’s shelves using her phone to scan the QR code on the book’s spine. Once she locates it, she fills out the return form and hands it to the librarian. After she checks it out, Mina takes the book and reads it at home.",
+    "human_review_status": "demonstration",
+    "human_review_note": "Reasonably coherent 57-token narrative, EOS, no serious repetition; invented QR/return-form details are preserved."
+  },
+  {
+    "method": "calibrated1638",
+    "prompt_id": "sandwich",
+    "generated_tokens": 64,
+    "decode_calls": 63,
+    "eos": false,
+    "token_cap": true,
+    "ms_per_decode": 333.7477745714286,
+    "tokens_per_s": 2.996274660659888,
+    "ssd_read_requests": 4371657,
+    "ssd_bytes": 26859460608,
+    "max_same_token_run": 2,
+    "max_same_word_run": 3,
+    "repeated_word_trigram_fraction": 0.16279069767441856,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " Start by wash and slice tomatoes, then spread spread butter spread. Next, spread cheese slices, then spread a spread of spread. Next, cut tomatoes, then spread spread. Next, then, arrange the spread spread. Next, then, then, spread the spread. Next, then, then, then, arrange the",
+    "human_review_status": "serious_degeneration",
+    "human_review_note": "Repeated spread/Next fragments with increasing degeneration;64-token cap, no EOS."
+  },
+  {
+    "method": "calibrated1638",
+    "prompt_id": "rainy_walk",
+    "generated_tokens": 39,
+    "decode_calls": 38,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 329.7123534473684,
+    "tokens_per_s": 3.032946717174274,
+    "ssd_read_requests": 2605516,
+    "ssd_bytes": 16008290304,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.0,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " The umbrella keeps Sam dry from the rain. It also prevents Sam from getting soaked. Once Sam arrives, Sam opens the umbrella to protect her hair and then closes it to dry it properly.",
+    "human_review_status": "inaccurate",
+    "human_review_note": "No serious repetition; odd explanation of umbrella handling."
+  },
+  {
+    "method": "calibrated1638",
+    "prompt_id": "bicycle_check",
+    "generated_tokens": 59,
+    "decode_calls": 58,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 333.3490475,
+    "tokens_per_s": 2.999858579166932,
+    "ssd_read_requests": 4045100,
+    "ssd_bytes": 24853094400,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.0,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " Before riding your bike, checking bike tires and brakes helps keep you safe! It stops your bike from going *too* fast or *too* fast. It also helps your bike last longer and stops you from getting a flat. Always check your bike’s brakes and tires before you ride.",
+    "human_review_status": "inaccurate",
+    "human_review_note": "Brief too-fast repetition and incorrect explanation of brake safety; no sustained loop."
+  },
+  {
+    "method": "calibrated1638",
+    "prompt_id": "photo_story",
+    "generated_tokens": 60,
+    "decode_calls": 59,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 337.3603834915254,
+    "tokens_per_s": 2.964189184427816,
+    "ssd_read_requests": 4168581,
+    "ssd_bytes": 25611761664,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.0,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " The family gathers around a picturesque lake, adorned with vibrant flowers and clear sky, capturing their joy in a serene moment. The photograph encapsulates their cherished memories, creating a lasting memento that allows them to relive their happy memories and share them with their loved ones.",
+    "human_review_status": "readable",
+    "human_review_note": "Coherent60-token paragraph; EOS, no serious repetition."
+  },
+  {
+    "method": "leanstream",
+    "prompt_id": "seed_story",
+    "generated_tokens": 64,
+    "decode_calls": 63,
+    "eos": false,
+    "token_cap": true,
+    "ms_per_decode": 128.64719,
+    "tokens_per_s": 7.773197378038339,
+    "ssd_read_requests": null,
+    "ssd_bytes": null,
+    "max_same_token_run": 1,
+    "max_same_word_run": 4,
+    "repeated_word_trigram_fraction": 0.7941176470588236,
+    "consecutive_phrase_loops": [
+      {
+        "phrase": "grows grows grows and",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "grows grows and grows",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "grows and grows grows",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "and grows grows grows",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "grows grows grows and",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "grows grows and grows",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "grows and grows grows",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "and grows grows grows",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "grows grows grows and",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "grows grows and grows",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "grows and grows grows",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "and grows grows grows",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "grows grows grows and",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "grows grows and grows",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "grows and grows grows",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "and grows grows grows",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "grows grows grows and",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "grows grows and grows",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "grows and grows grows",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "and grows grows grows",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "grows grows grows and grows grows grows and",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "grows grows and grows grows grows and grows",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "grows and grows grows grows and grows grows",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "and grows grows grows and grows grows grows",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "grows grows grows and grows grows grows and",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "grows grows and grows grows grows and grows",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "grows and grows grows grows and grows grows",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "and grows grows grows and grows grows grows",
+        "consecutive_repeats": 3
+      }
+    ],
+    "heuristic_serious_repetition": true,
+    "decoded_text": " The seed spprots, grows, grows, grows, grows, and grows, grows, grows, and grows, grows, grows, and grows, grows, grows, and grows, grows, grows, and grows, grows, grows, and grows, grows, grows, and grows, grows, grows, grows",
+    "human_review_status": "serious_loop",
+    "human_review_note": "Sustained grows loop;64-token cap, no EOS."
+  },
+  {
+    "method": "leanstream",
+    "prompt_id": "library_visit",
+    "generated_tokens": 56,
+    "decode_calls": 55,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 104.9892668909091,
+    "tokens_per_s": 9.524783147967565,
+    "ssd_read_requests": null,
+    "ssd_bytes": null,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.13636363636363635,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " Mina walks through the library, finds the book she checks on the shelves. She loc her shelf, checks the available return books, and then finds the available books. Then, she borrows the book she checks the books, and finally reads the book she checks the books.",
+    "human_review_status": "awkward_repetitive",
+    "human_review_note": "Malformed narrative and repeated checking-books phrases; EOS, no sustained long loop. Text is not repaired in GIF."
+  },
+  {
+    "method": "leanstream",
+    "prompt_id": "sandwich",
+    "generated_tokens": 64,
+    "decode_calls": 63,
+    "eos": false,
+    "token_cap": true,
+    "ms_per_decode": 106.78082974603174,
+    "tokens_per_s": 9.364976863154245,
+    "ssd_read_requests": null,
+    "ssd_bytes": null,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.6046511627906976,
+    "consecutive_phrase_loops": [
+      {
+        "phrase": "two slices",
+        "consecutive_repeats": 12
+      },
+      {
+        "phrase": "slices two",
+        "consecutive_repeats": 11
+      },
+      {
+        "phrase": "two slices",
+        "consecutive_repeats": 11
+      },
+      {
+        "phrase": "slices two",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "two slices",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "slices two",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "two slices",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "slices two",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "two slices",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "slices two",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "two slices",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "slices two",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "two slices",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "slices two",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "two slices",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "slices two",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "two slices",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "slices two",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "two slices",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "slices three",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "three slices",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "slices three",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "three slices",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "slices three",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "two slices two slices",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "slices two slices two",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "two slices two slices",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "slices two slices two",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "two slices two slices",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "slices two slices two",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "two slices two slices",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "slices two slices two",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "two slices two slices",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "slices two slices two",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "two slices two slices",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "slices two slices two",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "two slices two slices",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "two slices two slices two slices",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "slices two slices two slices two",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "two slices two slices two slices",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "slices two slices two slices two",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "two slices two slices two slices",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "slices two slices two slices two",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "two slices two slices two slices",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "two slices two slices two slices two slices",
+        "consecutive_repeats": 3
+      }
+    ],
+    "heuristic_serious_repetition": true,
+    "decoded_text": " Start by first, rin the tomatoes to wash them gently. Slice two Slices two Slices two Slices two Slices two Slices two Slices two Slices two Slices two Slices two Slices two Slices two Slices three Slices three Slices three Slices three Slices three S",
+    "human_review_status": "serious_loop",
+    "human_review_note": "Sustained Slices two/three loop;64-token cap, no EOS."
+  },
+  {
+    "method": "leanstream",
+    "prompt_id": "rainy_walk",
+    "generated_tokens": 48,
+    "decode_calls": 47,
+    "eos": true,
+    "token_cap": false,
+    "ms_per_decode": 105.45426721276597,
+    "tokens_per_s": 9.482783641010812,
+    "ssd_read_requests": null,
+    "ssd_bytes": null,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.025000000000000022,
+    "consecutive_phrase_loops": [],
+    "heuristic_serious_repetition": false,
+    "decoded_text": " The umbrella protects Sam from the rain from the rain, keeping Sam dry from Sam’s own body. Sam uses it to dry their own body, and Sam puts it in their backpack after school. Sam carries it to school after school.",
+    "human_review_status": "incoherent",
+    "human_review_note": "Nonsensical claims and repetition about rain/body/school; EOS."
+  },
+  {
+    "method": "leanstream",
+    "prompt_id": "bicycle_check",
+    "generated_tokens": 64,
+    "decode_calls": 63,
+    "eos": false,
+    "token_cap": true,
+    "ms_per_decode": 103.63506163492065,
+    "tokens_per_s": 9.649244032128237,
+    "ssd_read_requests": null,
+    "ssd_bytes": null,
+    "max_same_token_run": 1,
+    "max_same_word_run": 1,
+    "repeated_word_trigram_fraction": 0.9512195121951219,
+    "consecutive_phrase_loops": [
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 21
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 21
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 20
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 20
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 19
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 19
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 18
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 18
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 17
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 17
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 16
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 16
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 15
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 15
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 14
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 14
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 13
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 13
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 12
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 12
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 11
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 11
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "riding before riding before riding before riding before",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "before riding before riding before riding before riding",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "riding before riding before riding before riding before",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "before riding before riding before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "before riding before riding before riding before riding before riding before riding",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "riding before riding before riding before riding before riding before riding before",
+        "consecutive_repeats": 3
+      }
+    ],
+    "heuristic_serious_repetition": true,
+    "decoded_text": " Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before riding! Before",
+    "human_review_status": "serious_loop",
+    "human_review_note": "Sustained Before riding loop;64-token cap, no EOS."
+  },
+  {
+    "method": "leanstream",
+    "prompt_id": "photo_story",
+    "generated_tokens": 64,
+    "decode_calls": 63,
+    "eos": false,
+    "token_cap": true,
+    "ms_per_decode": 103.02500565079366,
+    "tokens_per_s": 9.70638141374658,
+    "ssd_read_requests": null,
+    "ssd_bytes": null,
+    "max_same_token_run": 1,
+    "max_same_word_run": 30,
+    "repeated_word_trigram_fraction": 0.84375,
+    "consecutive_phrase_loops": [
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 15
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 14
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 14
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 13
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 13
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 12
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 12
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 11
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 11
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 10
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 9
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 8
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 7
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 6
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 5
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing",
+        "consecutive_repeats": 4
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      },
+      {
+        "phrase": "posing posing posing posing posing posing posing posing posing posing",
+        "consecutive_repeats": 3
+      }
+    ],
+    "heuristic_serious_repetition": true,
+    "decoded_text": " The family stands under, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing, posing",
+    "human_review_status": "serious_loop",
+    "human_review_note": "Sustained posing loop;64-token cap, no EOS."
+  }
+]

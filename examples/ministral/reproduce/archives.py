@@ -67,9 +67,9 @@ def package(source,output,source_revision):
     catalog=load(HERE/'artifact_catalog.json');records=catalog['files'];deferred=sorted(n for n in records if n.startswith('benchmarks/'))
     categories={}
     for name,item in sorted(records.items()):
+        if name in deferred:continue
         path=safe_path(source,name)
         if not path.is_file() or path.stat().st_size!=item['size'] or sha(path)!=item['sha256']:raise AssetError('Source is missing or incompatible: '+name)
-        if name in deferred:continue
         category={'leanstream_weights':'g2-weights','full_predictors':'predictors-full','p1_lite_predictors':'predictors-p1-lite','baseline_weights':'baseline-weights','oneshot_predictors':'oneshot-predictors'}.get(name.split('/')[0],'metadata')
         categories.setdefault(category,[]).append(name)
     archives=[]

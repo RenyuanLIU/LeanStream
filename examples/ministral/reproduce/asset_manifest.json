@@ -10,7 +10,7 @@
   "redistribution": "APPROVED",
   "catalog_sha256": "bb478341d788026192f6712d0e207d17ba71dce946ebed362aecaaba98a8a4de",
   "source_repository": "https://github.com/RenyuanLIU/LeanStream",
-  "source_base_revision": "04aae3f59563cb60fd72e63a136dec3e59b37784",
+  "source_base_revision": "f0909037d09731977c14888c120c7d77fed57ad4",
   "checkpoint": {
     "repo_id": "cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit",
     "revision": "e3a799844ba08f27fddbf118e154057eb0105889"
