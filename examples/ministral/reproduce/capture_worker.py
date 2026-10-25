@@ -36,13 +36,14 @@ def main():
         y=model(input_ids=torch.tensor([prompt['prompt_input_ids']],device='cuda'),use_cache=True,return_dict=True)
         token=int(y.logits[:,-1].argmax(-1).item());cache=y.past_key_values;prefill_end=time.perf_counter_ns();first=token
         if a.method!='leanstream':r.decode=True;r.collect=True;r.sample_id='author-written-ssd-explanation'
-        ids=[];completion=[];decode_start=time.perf_counter_ns()
+        ids=[];completion=[];feedback=[];lengths=[];decode_start=time.perf_counter_ns()
         for j in range(a.max_new_tokens-1):
             if token==2:break
             if a.method!='leanstream':r.token_index=j
+            feedback.append(token)
             y=model(input_ids=torch.tensor([[token]],device='cuda'),past_key_values=cache,use_cache=True,return_dict=True)
             cache=y.past_key_values;token=int(y.logits[:,-1].argmax(-1).item());end=time.perf_counter_ns()
-            ids.append(token);completion.append((end-decode_start)/1e6)
+            ids.append(token);completion.append((end-decode_start)/1e6);length=int(cache[0][0].shape[-2]);assert length==len(prompt['prompt_input_ids'])+j+1;lengths.append(length)
         decode_end=time.perf_counter_ns();drain(r,a.method);drain_end=time.perf_counter_ns()
     if a.method!='leanstream':
         if cache_hash(r.layers)!=hot_before:raise RuntimeError('Fixed-hot cache changed')
@@ -50,10 +51,12 @@ def main():
         io=dict(fixed_hot_immutable=True,selected_neurons=2867,resident_neurons=2437,physical_bytes_read=sum(c['actual_physical_bytes_read'] for c in r.counters))
     else:io=dict(policy='REPAIRED_KNEE',active_groups=1434,keep_groups=1219)
     prefix_ids=[first]+ids
+    assert feedback==prefix_ids[:-1]
     prefixes=[tokenizer.decode(prefix_ids[:i],skip_special_tokens=True) for i in range(1,len(prefix_ids)+1)]
     native={Path(name).name:digest for name,digest in proof['native_libraries'].items()}
     origins={name:str(Path(path).relative_to(PROJECT)) for name,path in proof['modules'].items()}
-    record=dict(method=a.method,prompt_input_ids_sha256=hashlib.sha256(json.dumps(prompt['prompt_input_ids'],separators=(',',':')).encode()).hexdigest(),decoded_prefixes_sha256=hashlib.sha256(json.dumps(prefixes,ensure_ascii=False,separators=(',',':')).encode()).hexdigest(),prefill_token_id=first,generated_token_ids=ids,token_completion_ms=completion,decoded_prefixes=prefixes,eos=(prefix_ids[-1]==2),max_new_tokens=a.max_new_tokens,prefill_ms=(prefill_end-prefill_start)/1e6,decode_wall_ms=(decode_end-decode_start)/1e6,final_drain_ms=(drain_end-decode_end)/1e6,model_repository=MODEL_REPO,model_revision=MODEL_REVISION,tokenizer_sha256=sha(a.assets/'metadata/tokenizer_compat.json'),model_config_sha256=sha(a.model/'config.json'),packed_manifest_sha256=sha(a.assets/'leanstream_weights/g2_weights/manifest.json'),predictor_capture_sha256=sha(a.assets/'metadata/predictor_capture.json'),public_source_base=proof['public_commit'],runtime_module_origins=origins,native_library_sha256=native,hardware=dict(machine=proof['hardware']['machine'],cuda=proof['cuda_device']),software=proof['software'],configuration=dict(greedy=True,seed=42,eos_id=2,QD=24,attention='unsplit Direct-GQA',cache_policy='REPAIRED_KNEE' if a.method=='leanstream' else 'immutable fixed-hot',native_pre_enqueue=a.method=='leanstream',B_CTAs=32 if a.method=='leanstream' else None,warps_per_CTA=4),io=io)
+    record=dict(method=a.method,prompt_input_ids_sha256=hashlib.sha256(json.dumps(prompt['prompt_input_ids'],separators=(',',':')).encode()).hexdigest(),decoded_prefixes_sha256=hashlib.sha256(json.dumps(prefixes,ensure_ascii=False,separators=(',',':')).encode()).hexdigest(),prefill_token_id=first,actual_generated_ids=prefix_ids,feedback_input_ids=feedback,kv_cache_lengths=lengths,generated_token_ids=ids,token_completion_ms=completion,decoded_prefixes=prefixes,eos=(prefix_ids[-1]==2),max_new_tokens=a.max_new_tokens,prefill_ms=(prefill_end-prefill_start)/1e6,decode_wall_ms=(decode_end-decode_start)/1e6,final_drain_ms=(drain_end-decode_end)/1e6,model_repository=MODEL_REPO,model_revision=MODEL_REVISION,tokenizer_sha256=sha(a.assets/'metadata/tokenizer_compat.json'),model_config_sha256=sha(a.model/'config.json'),packed_manifest_sha256=sha(a.assets/'leanstream_weights/g2_weights/manifest.json'),predictor_capture_sha256=sha(a.assets/'metadata/predictor_capture.json'),public_source_base=proof['public_commit'],runtime_module_origins=origins,native_library_sha256=native,hardware=dict(machine=proof['hardware']['machine'],cuda=proof['cuda_device']),software=proof['software'],configuration=dict(greedy=True,seed=42,eos_id=2,QD=24,attention='unsplit Direct-GQA',cache_policy='REPAIRED_KNEE' if a.method=='leanstream' else 'immutable fixed-hot',native_pre_enqueue=a.method=='leanstream',B_CTAs=32 if a.method=='leanstream' else None,warps_per_CTA=4),io=io)
+    if a.method=='one-shot':record['one_shot_predictor_manifest_sha256']=sha(a.assets/'oneshot_predictors/MANIFEST.json')
     if a.method=='leanstream':record['native_geometry']=[dict(layer=k['layer'],stage=k['stage'],grid=k['grid'],warps=k['warps_per_cta']) for k in load(a.output/'native_kernel_manifest.json')]
     write(a.output/'trace.json',record)
     if a.method!='leanstream':r.lib.fc_destroy(r.ctx)

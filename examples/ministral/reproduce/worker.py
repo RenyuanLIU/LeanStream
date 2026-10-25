@@ -36,9 +36,13 @@ def bind(r,out):
         raise RuntimeError('Production native geometry must be A610/B32/reduction128, four warps per CTA')
     write(out/'native_kernel_manifest.json',manifest)
 
+def process_storage_io():
+    # Process-wide storage accounting outside decode timing; no GPU sync/profiling.
+    return {k:int(v.strip()) for k,v in (line.split(':',1) for line in Path('/proc/self/io').read_text().splitlines())}
+
 def speed(a,model,r,torch):
     prompts=rows(a.assets/'benchmarks/speed_prompts.jsonl');indices=INDICES if a.direction=='forward' else list(reversed(INDICES))
-    token_rows=[];generated=[];hot_before=None
+    token_rows=[];generated=[];storage_rows=[];hot_before=None
     if a.method!='leanstream':
         from baselines.fixed_cache import cache_hash
         hot_before=cache_hash(r.layers)
@@ -47,16 +51,23 @@ def speed(a,model,r,torch):
         y=model(input_ids=torch.tensor([prompts[index]['input_ids']],device='cuda'),use_cache=True,return_dict=True)
         cache=y.past_key_values;token=int(y.logits[:,-1].argmax(-1).item());ids=[token]
         if a.method!='leanstream':r.decode=True;r.collect=measured;r.sample_id=prompts[index]['sample_id']
+        storage_before=process_storage_io() if measured else None
+        feedback=[];lengths=[]
         for j in range(count):
             if token==2:break
             if a.method!='leanstream':r.token_index=j
+            feedback.append(token)
             begin=time.perf_counter_ns()
             y=model(input_ids=torch.tensor([[token]],device='cuda'),past_key_values=cache,use_cache=True,return_dict=True)
             cache=y.past_key_values;token=int(y.logits[:,-1].argmax(-1).item());end=time.perf_counter_ns()
             ids.append(token)
+            length=int(cache[0][0].shape[-2]);assert length==len(prompts[index]['input_ids'])+j+1;lengths.append(length)
             if measured:token_rows.append(dict(index=index,sample_id=prompts[index]['sample_id'],token_index=j,token_wall_ms=(end-begin)/1e6))
         drain(r,a.method)
-        if measured:generated.append(dict(index=index,sample_id=prompts[index]['sample_id'],generated_ids=ids))
+        if measured:
+            assert feedback==ids[:-1]
+            generated.append(dict(index=index,sample_id=prompts[index]['sample_id'],generated_ids=ids,feedback_input_ids=feedback,kv_cache_lengths=lengths))
+            storage_after=process_storage_io();storage_rows.append(dict(index=index,sample_id=prompts[index]['sample_id'],scope='Process-wide decode plus final drain; read syscall count includes small accounting/host reads, not exclusively SSD requests',**{k:storage_after[k]-storage_before[k] for k in ['read_bytes','syscr','rchar']}))
     with torch.inference_mode():
         if a.sanity:
             if a.method=='leanstream':raise ValueError('Use the existing numerical.py for LeanStream numerical checks')
@@ -65,6 +76,8 @@ def speed(a,model,r,torch):
             run(indices[0],False)
             if a.method=='leanstream':bind(r,a.output)
             proof=provenance(a.assets,a.build,a.method);proof.update(direction=a.direction,cache_policy='dynamic REPAIRED_KNEE' if a.method=='leanstream' else 'immutable fixed-hot 2437 individual neurons',gpu_geometry=dict(A=610,B=32,reduction=128,warps=4) if a.method=='leanstream' else dict(sparse=717,reduction=128,warps=4))
+            proof['baseline_predictor_features']=1638 if a.method!='leanstream' else None
+            proof['one_shot_predictor_manifest_sha256']=sha(a.assets/'oneshot_predictors/MANIFEST.json') if a.method=='one-shot' else None
             write(a.output/'run_manifest.json',proof)
             for index in indices:run(index,True)
     if not token_rows:raise RuntimeError('No measured decode calls')
@@ -78,6 +91,7 @@ def speed(a,model,r,torch):
         if a.sanity:write(a.output/'run_manifest.json',provenance(a.assets,a.build,a.method))
     with (a.output/'per_token.csv').open('w') as f:
         writer=csv.DictWriter(f,fieldnames=list(token_rows[0]));writer.writeheader();writer.writerows(token_rows)
+    record_lines(a.output/'process_storage_io.jsonl',storage_rows)
     total=sum(x['token_wall_ms'] for x in token_rows)
     write(a.output/'summary.json',dict(status='PASS',method=a.method,direction=a.direction,decode_tokens=len(token_rows),total_decode_ms=total,ms_per_token=total/len(token_rows),tokens_per_s=1000*len(token_rows)/total,sanity=a.sanity,protocol='forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item',indices=indices))
     record_lines(a.output/'generated_tokens.jsonl',generated)

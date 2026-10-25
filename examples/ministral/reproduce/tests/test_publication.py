@@ -52,10 +52,10 @@ class Publication(unittest.TestCase):
             def install(data):
                 raw=(json.dumps(data,indent=2)+'\n').encode();(d/'asset_manifest.json').write_bytes(raw)
                 return {**{r['name']:dict(size=r['size']) for r in data['archives']},'asset_manifest.json':dict(size=len(raw)),'SHA256SUMS':dict(size=1)}
-            assets=install(m)
+            pending=copy.deepcopy(m);pending['redistribution']='PENDING_OWNER_APPROVAL';assets=install(pending)
             with self.assertRaises(ValueError):check.approved_manifest(root,archives.PUBLIC_REPOSITORY,archives.ASSET_TAG,assets)
             approved=copy.deepcopy(m);approved['publication']['status']='PUBLISHED';approved['redistribution']='APPROVED';assets=install(approved)
-            _,expected=check.approved_manifest(root,archives.PUBLIC_REPOSITORY,archives.ASSET_TAG,assets);self.assertEqual(len(expected),9)
+            _,expected=check.approved_manifest(root,archives.PUBLIC_REPOSITORY,archives.ASSET_TAG,assets);self.assertEqual(len(expected),10)
             assets[approved['archives'][0]['name']]['size']+=1
             with self.assertRaises(ValueError):check.approved_manifest(root,archives.PUBLIC_REPOSITORY,archives.ASSET_TAG,assets)
 

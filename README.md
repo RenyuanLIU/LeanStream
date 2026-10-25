@@ -102,17 +102,17 @@ The optional [PyTorch integration kit](docs/integrating_pytorch.md) lets you ret
 
 ## Performance Demonstration
 
-![Fixed-token decode performance comparison: same input sequence, independently measured runs](docs/media/speed_comparison.gif)
+The animation compares Block, One-shot, and LeanStream on NVIDIA Jetson AGX Orin for the same prompt. Tokens appear according to their measured completion times.
 
-**Fixed-token decode performance comparison. Same input sequence, independently measured runs.** Block, One-shot and LeanStream each process the same 112 reference continuation tokens through real KV-cached model forwards on Jetson AGX Orin. Text appears at each method's measured step-completion time, using one common replay scale. This is teacher-forced input text, **not independently generated answers**. Displayed throughput is measured on this fixed workload; the historical pooled benchmark below is separate. [Input IDs, timing evidence and reproduction](docs/media/README.md).
+![Performance Demonstration](docs/media/autoregressive/library_visit.gif)
 
 ## Reproduce the Ministral-3 8B Results
 
 The optional [reproduction guide](docs/reproduce_ministral3_8b.md) covers the pinned `cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit` checkpoint, exact LeanStream weights/predictors, download and SHA256 verification, native build, short numerical/decode checks, Block/One-shot/Progressive comparison, and optional fixed-500 CoQA scoring. Validated platform: Jetson AGX Orin, CUDA11.8, vendor PyTorch2.1.0a0 and Triton3.1.0. Production Triton kernel source is included in `backends/triton/`; no separate kernel download is required.
 
-**Artifact availability:** public downloads remain **UNPUBLISHED** until the licensed, checksummed assets are available in a public GitHub Release. CoQA contents are downloaded under their original terms and reconstructed to exact historical hashes; model weights and predictors require no training, calibration or repacking. The general toolkit builds without these optional artifacts.
+The checksummed [v2 asset collection](https://github.com/RenyuanLIU/LeanStream/releases/tag/ministral3-8b-assets-v2) includes packed weights and all predictors, including the default recalibrated One-shot. Download the pinned upstream checkpoint separately; CoQA inputs are reconstructed locally under their original terms. No training, calibration, conversion or repacking is required.
 
-Previously measured matched throughput was Block **2.831**, One-shot **3.281**, LeanStream **8.877tokens/s** (approximately3.14× and2.71×). Completed public fixed-500 accuracy was **78.6953% F1 /62.4167% EM**. These are previous experiment results, distinct from the GIF's teacher-forced workload. [Full protocol and commands](examples/ministral/README.md).
+Historical v1 matched throughput (using the original512-feature One-shot) was Block **2.831**, One-shot **3.281**, LeanStream **8.877tokens/s** (approximately3.14× and2.71×). Completed public fixed-500 accuracy was **78.6953% F1 /62.4167% EM**. These are previous experiment results. [Full protocol and commands](examples/ministral/README.md).
 
 ## License
 

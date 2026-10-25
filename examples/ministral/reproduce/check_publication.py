@@ -18,6 +18,7 @@ REQUIRED=[
     'LICENSE','CMakeLists.txt','include/leanstream/runtime.h','include/leanstream/weight_manager.h',
     'src/runtime/runtime.cpp','src/io/stream_io.cpp','predictor/predictor_cpu.cpp',
     'backends/triton/core.py','backends/triton/persistent.py','backends/triton/reduction.py','backends/triton/enqueue.cpp',
+    'examples/ministral/reproduce/baselines/recalibrated.py','docs/media/autoregressive/library_visit.gif',
     'scripts/build_ministral.py','examples/ministral/run.py','examples/ministral/numerical.py',
     'examples/ministral/reproduce/artifact_catalog.json','examples/ministral/reproduce/asset_manifest.json',
     'examples/ministral/reproduce/scoring/coqa.py','examples/ministral/reproduce/coqa_selection.json',
@@ -107,7 +108,7 @@ def approved_manifest(source,repository,tag,assets):
     require(m['source_repository']=='https://github.com/'+repository,'Manifest source repository differs')
     require(m['catalog_sha256']==sha(directory/'artifact_catalog.json'),'Tagged catalog hash differs')
     require(m['checkpoint']==dict(repo_id=MODEL_REPO,revision=MODEL_REVISION) and catalog['model']['repo_id']==MODEL_REPO and catalog['model']['revision']==MODEL_REVISION,'Unsupported checkpoint identity')
-    require(len(m['archives'])==8 and len({r['name'] for r in m['archives']})==8,'Expected eight distinct release archives')
+    require(len(m['archives'])==catalog['release_archive_count']==9 and len({r['name'] for r in m['archives']})==9,'Expected nine distinct v2 release archives')
     expected={r['name']:dict(size=r['size'],sha256=r['sha256']) for r in m['archives']}
     expected['asset_manifest.json']=dict(size=len(raw),sha256=hashlib.sha256(raw).hexdigest())
     for name,item in expected.items():
@@ -176,6 +177,9 @@ def run(repository,tag,output):
         verify_sums(cache/'SHA256SUMS',cache,expected)
         command('verify',['-m','examples.ministral.reproduce.verify_assets','--assets',str(output/'assets'),'--model',str(output/'checkpoint'),'--scope','runtime'])
         report['checks'].update(anonymous_release_download='PASS',archive_checksums='PASS',fresh_catalog_extraction='PASS',checkpoint_identity='PASS')
+        command('coqa',['-m','examples.ministral.reproduce.prepare_coqa','--assets',str(output/'assets'),'--download'])
+        command('verify-all',['-m','examples.ministral.reproduce.verify_assets','--assets',str(output/'assets'),'--model',str(output/'checkpoint'),'--scope','all'])
+        report['checks']['fixed500_reconstruction']='PASS'
         report.update(status='PASS',stage='complete',downloaded_asset_bytes=sum((cache/name).stat().st_size for name in [*expected,'SHA256SUMS']),inference_tests='NOT_RUN; run documented Jetson smoke commands separately')
     except (OSError,ValueError,KeyError,TypeError,IndexError,subprocess.CalledProcessError,tarfile.TarError) as exc:
         report.update(status='BLOCKED',error=str(exc))

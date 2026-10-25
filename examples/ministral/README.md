@@ -2,7 +2,7 @@
 
 The [complete reproduction guide](../../docs/reproduce_ministral3_8b.md) is the recommended download → verify → build → run workflow. It covers the pinned upstream model, exact precomputed Group2 weights and calibrated predictors, original Block/One-shot baselines, Progressive inference, matched throughput, fixed-500 scoring and real-token replay.
 
-**Artifact availability:** no public asset Release is available yet. Default public downloads stop with UNPUBLISHED. No private source or unpublished executable is required; model/experiment data still require their approved distribution route. CoQA contents are obtained under their original terms and reconstructed locally to exact historical hashes.
+**Artifact availability:** no public asset Release is available yet. Default public downloads stop with v2 release. No private source or unpublished executable is required; model/experiment data still require their approved distribution route. CoQA contents are obtained under their original terms and reconstructed locally to exact historical hashes.
 
 The supported checkpoint is `cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit`, pinned revision `e3a799844ba08f27fddbf118e154057eb0105889`. The validated environment is Jetson AGX Orin SM87, CUDA11.8, vendor PyTorch2.1.0a0, Triton3.1.0, Transformers4.41.1, NumPy1.24.4 and safetensors0.4.2. See [dependencies](../../docs/dependencies.md).
 
@@ -23,3 +23,13 @@ Use `smoke --method block` or `--method one-shot` for the original bounded basel
 Existing `run.py`, `numerical.py`, `python/`, `native/` and `scripts/` remain available unchanged. Developer export/packing helpers remain in the tree for new research artifacts, but reproducing the supported experiment must use the exact validated downloadable binaries. It does not require training, calibration, quantization, reordering, packing or fixed-hot generation.
 
 Previous measurements are evidence, not expected constants: matched public-wrapper Block2.831, One-shot3.281 and LeanStream8.877tokens/s; completed public fixed-500 F1 78.6953%, EM62.4167%. Their protocols and distinct historical references are documented in the guide; these are historical measurements, not expected outputs.
+
+## Complete v2 reproduction
+
+Follow [the public download/build/run guide](../../docs/reproduce_ministral3_8b.md).
+The v2 asset Release adds a distinct recalibrated1638-feature early-input predictor
+for the default `one-shot` method. Block and LeanStream retain their original
+algorithms and parameters. All three methods run through reproduce_speed with
+`--method all`; no experimental flags or private files are required. The current
+README GIF is genuine autoregressive generation, documented under
+[media provenance](../../docs/media/autoregressive/README.md).

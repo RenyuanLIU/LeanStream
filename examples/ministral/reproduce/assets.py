@@ -71,6 +71,20 @@ def verify(root, full=True, model=True, model_root=None, scope="all"):
             p=Path(model_root or root/'model')/name
             if not p.is_file() or p.stat().st_size!=record['size'] or (full and sha(p)!=record['sha256']):
                 raise AssetError('Upstream model missing/incompatible: '+name)
+    om=load(root/'oneshot_predictors/MANIFEST.json')
+    if om.get('kind')!='experimental_pre_attention_ridge_W4A8' or om['model']['revision']!=MODEL_REVISION:
+        raise AssetError('Wrong recalibrated One-shot predictor family')
+    training=load(root/'oneshot_predictors/TRAINING_MANIFEST.json')
+    for i in range(34):
+        prefix=f'layer_{i:02d}/'
+        for name in ['features_1638.bin','predictor_1638.bin','predictor_1638_scales.bin']:
+            record=om['files'][prefix+name]
+            if record!=training['files'][prefix+name] or m['files']['oneshot_predictors/'+prefix+name]!=record:
+                raise AssetError('Recalibrated predictor original parameter identity mismatch')
+        features=np.fromfile(root/'oneshot_predictors'/prefix/'features_1638.bin',np.int32)
+        scales=np.fromfile(root/'oneshot_predictors'/prefix/'predictor_1638_scales.bin',np.float32)
+        if features.shape!=(1638,) or len(np.unique(features))!=1638 or np.any(features<0) or np.any(features>=4096) or scales.shape!=(28672,) or not np.isfinite(scales).all() or np.any(scales<=0):
+            raise AssetError('Invalid recalibrated predictor features/scales')
     wm=load(root/'leanstream_weights/g2_weights/manifest.json')
     if wm['geometry']!=dict(H=4096,I=14336,layers=34,groups=7168) or wm['identity']['format']!='leanstream_signed_int4_per128_g2_v0':
         raise AssetError('Unsupported packed Group2 format')

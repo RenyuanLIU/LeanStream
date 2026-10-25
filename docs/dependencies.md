@@ -30,3 +30,12 @@ git -C /path/to/triton checkout cf34004b8a67d290a962da166f5aa2fc66751326
 ```
 
 This is an external dependency checkout. No private LeanStream source is required. Check `import torch, triton; print(torch.__version__, triton.__version__)` before building the optional native backend. Standard CUDA paths such as `/usr/local/cuda-11.8/bin/nvcc` may need to be selected explicitly.
+
+## Optional complete Ministral reproduction
+
+Use the pinned model, nine checksummed v2 asset archives and exact software/hardware
+recipe in [the reproduction guide](reproduce_ministral3_8b.md). This adds only
+optional Hugging Face/tokenizers/scoring dependencies; generic CPU builds do not
+import or download them. Production kernels are included in backends/triton/.
+The default One-shot uses its distinct downloaded1638-feature early-input W4A8
+parameters. No training or model conversion is part of the reproduction workflow.

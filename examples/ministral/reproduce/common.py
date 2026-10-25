@@ -12,7 +12,7 @@ EXAMPLE = HERE.parent
 PROJECT = EXAMPLE.parents[1]
 MODEL_REPO = 'cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit'
 MODEL_REVISION = 'e3a799844ba08f27fddbf118e154057eb0105889'
-VERSION = 'leanstream-ministral3-8b-v1'
+VERSION = 'leanstream-ministral3-8b-v2'
 INDICES = [0, 2, 5, 6, 7, 8, 9, 11]
 
 def bootstrap():

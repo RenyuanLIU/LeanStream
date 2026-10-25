@@ -71,7 +71,7 @@ class Release(unittest.TestCase):
 
     def test_versioned_manifest_completeness(self):
         manifest=HERE/'asset_manifest.json';m=release_manifest(manifest)
-        self.assertEqual(len(m['archives']),8)
+        self.assertEqual(len(m['archives']),9)
         self.assertTrue(all(r['size']<int(1.8*1024**3) for r in m['archives']))
         for mutate in ['missing','duplicate','checkpoint']:
             bad=copy.deepcopy(m)

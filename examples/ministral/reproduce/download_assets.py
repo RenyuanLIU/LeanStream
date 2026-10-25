@@ -30,7 +30,7 @@ def transfer(source,target,record):
     if temporary.stat().st_size!=record['size'] or sha(temporary)!=record['sha256']:raise AssetError('Downloaded checksum mismatch: '+str(target))
     temporary.replace(target)
 
-def http_download(url,target,record,token=None):
+def _http_download_once(url,target,record,token=None):
     target=Path(target);target.parent.mkdir(parents=True,exist_ok=True)
     if not url.startswith('https://'):raise AssetError('HTTPS download required')
     if target.exists():
@@ -64,6 +64,20 @@ def http_download(url,target,record,token=None):
                 f.write(block)
     if part.stat().st_size!=record['size'] or sha(part)!=record['sha256']:raise AssetError('Download checksum/size mismatch: '+target.name)
     part.replace(target)
+
+def http_download(url,target,record,token=None):
+    # Resume already-verified chunks on transient failures; never retry a full-size bad hash.
+    import time,http.client
+    for attempt in range(5):
+        try:return _http_download_once(url,target,record,token)
+        except urllib.error.HTTPError as exc:
+            if exc.code not in (408,429,500,502,503,504) or attempt==4:raise
+        except (OSError,http.client.IncompleteRead):
+            if attempt==4:raise
+        except AssetError:
+            part=Path(target).with_name(Path(target).name+'.part')
+            if not part.exists() or part.stat().st_size>=record['size'] or attempt==4:raise
+        time.sleep(min(2**attempt,8))
 
 def release_urls(repository,tag,token=None,release_id=None):
     if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',repository):raise AssetError('Invalid release repository')
