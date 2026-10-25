@@ -69,7 +69,7 @@ public downloads. A changed/incomplete file is an error, never a silent substitu
 post-attention MLP input. It selects2867 individual neurons, checks the immutable
 2437-neuron fixed-hot cache, loads misses from SSD and waits before MLP compute.
 
-**One-shot (v2 default)** uses1638 features padded1664, its own calibrated W4A8
+**One-shot** uses1638 features padded1664, its own calibrated W4A8
 parameters under `oneshot_predictors/`, and an early normalization proxy:
 post_attention_layernorm applied to the current raw pre-attention residual before
 Attention. It publishes one prediction and starts SSD reads early, overlapping
@@ -196,6 +196,6 @@ the file rather than regenerating assets. On O_DIRECT errors use supported local
 NVMe/alignment. On missing sm87 kernels use the matching compiler/environment.
 Never copy private prebuilt libraries or change numerical tolerances to pass.
 
-## Public v2 accuracy validation
+## Public accuracy validation
 
 The same-session LeanStream run completed all 500 records: F1 **78.4949%**, EM **61.7833%**. Relative to historical Progressive, the differences are +0.0628 and −0.5333 percentage points. All records aligned, none were missing, logits were finite, and the original scorer was used. The EM difference slightly exceeds the preferred 0.5-point comparison threshold; this timing-dependent run is reported without changing scoring or runtime behavior. These are LeanStream results, not a full-500 evaluation of the new One-shot predictor. See [`validated_results_v2.json`](../examples/ministral/reproduce/validated_results_v2.json) for measured performance, storage counters and validation provenance.
