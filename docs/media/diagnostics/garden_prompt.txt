@@ -1,0 +1,6 @@
+Read the story and answer the question using only the story.
+
+Story: Maya planted carrots and beans in her garden. Every morning she watered the plants before school. On Saturday, she picked the ripe carrots and made soup for her family.
+
+Question: What did Maya do with the carrots she picked?
+Answer:

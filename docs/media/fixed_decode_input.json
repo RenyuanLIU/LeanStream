@@ -1,0 +1,5 @@
+{
+  "prompt_text": "Explain how prediction-guided SSD weight streaming can help a memory-limited computer run a large language model.\n\nAnswer:",
+  "continuation_text": " A large language model uses many weight values to compute each next token. When device memory is limited, some weights can remain on an SSD. A predictor estimates which groups will be useful, and the runtime starts loading them early. Later predictions refine the order of pending reads. Data that is already ready can be reused, while reads in flight finish normally. The GPU consumes ready groups and combines their partial results. Overlapping storage access with computation can reduce waiting, but correct integration still requires compatible packed weights, careful buffer ownership, and a validated sparse computation kernel.",
+  "source": "Public author-written reference text; teacher-forced inputs, not model-generated answers."
+}

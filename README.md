@@ -96,6 +96,24 @@ The flow is offline characterization -> offline table synthesis -> latest I/O st
 Production execution is validated on Jetson AGX Orin with CUDA 11.8, upstream Triton 3.1.0, and vendor PyTorch 2.1.0a0. The optional model loader uses Transformers 4.41.1. Mapped metadata/staging require integrated-device coherence and system-scope atomics. Do not assume this publication mechanism is valid for arbitrary discrete GPUs. CPU runtime tests also build on x86 Linux. See [porting](docs/porting.md) and [dependencies](docs/dependencies.md).
 
 
+## Integrating LeanStream with Your PyTorch Model
+
+The optional [PyTorch integration kit](docs/integrating_pytorch.md) lets you retain your model, choose prediction points, provide compatible predictors and packed sparse weights, and reuse LeanStream asynchronous SSD I/O and READY-driven persistent execution. Start with the runnable [tiny model example](examples/custom_pytorch/) and [custom Triton bundle guide](docs/custom_triton.md). Manual integration is tested on Jetson; automatic discovery is structural inspection, and Qwen end-to-end support requires user-provided compatible artifacts and validation. The existing Ministral integration remains independent.
+
+## Performance Demonstration
+
+![Fixed-token decode performance comparison: same input sequence, independently measured runs](docs/media/speed_comparison.gif)
+
+**Fixed-token decode performance comparison. Same input sequence, independently measured runs.** Block, One-shot and LeanStream each process the same 112 reference continuation tokens through real KV-cached model forwards on Jetson AGX Orin. Text appears at each method's measured step-completion time, using one common replay scale. This is teacher-forced input text, **not independently generated answers**. Displayed throughput is measured on this fixed workload; the historical pooled benchmark below is separate. [Input IDs, timing evidence and reproduction](docs/media/README.md).
+
+## Reproduce the Ministral-3 8B Results
+
+The optional [reproduction guide](docs/reproduce_ministral3_8b.md) covers the pinned `cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit` checkpoint, exact LeanStream weights/predictors, download and SHA256 verification, native build, short numerical/decode checks, Block/One-shot/Progressive comparison, and optional fixed-500 CoQA scoring. Validated platform: Jetson AGX Orin, CUDA11.8, vendor PyTorch2.1.0a0 and Triton3.1.0. Production Triton kernel source is included in `backends/triton/`; no separate kernel download is required.
+
+**Artifact availability:** public downloads remain **UNPUBLISHED** until the licensed, checksummed assets are available in a public GitHub Release. CoQA contents are downloaded under their original terms and reconstructed to exact historical hashes; model weights and predictors require no training, calibration or repacking. The general toolkit builds without these optional artifacts.
+
+Previously measured matched throughput was Block **2.831**, One-shot **3.281**, LeanStream **8.877tokens/s** (approximately3.14× and2.71×). Completed public fixed-500 accuracy was **78.6953% F1 /62.4167% EM**. These are previous experiment results, distinct from the GIF's teacher-forced workload. [Full protocol and commands](examples/ministral/README.md).
+
 ## License
 
-License: MIT. See [LICENSE](LICENSE). External dependency licenses are described in [dependencies](docs/dependencies.md). Validation and release limits are recorded in [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
+License: MIT. See [LICENSE](LICENSE). External dependency licenses are described in [dependencies](docs/dependencies.md).

@@ -1,0 +1,3038 @@
+{
+  "format_version": 1,
+  "dataset": {
+    "name": "CoQA",
+    "split": "validation",
+    "official_url": "https://downloads.cs.stanford.edu/nlp/data/coqa/coqa-dev-v1.0.json",
+    "sha256": "dfa367a9733ce53222918d0231d9b3bedc2b8ee831a2845f62dfc70701f2540a",
+    "size": 9090845,
+    "mirror_repository": "EleutherAI/coqa",
+    "mirror_revision": "dd90bb77780a0cacf024a05ce08874930cd2b22d",
+    "mirror_file": "coqa-dev-v1.0.json"
+  },
+  "records": [
+    {
+      "index": 0,
+      "sample_id": "3dr23u6we5exclen4th8uq9rb42tel",
+      "source": "mctest",
+      "turns": 12
+    },
+    {
+      "index": 1,
+      "sample_id": "3azhrg4cu4ktme1zh7c2ro3pn2430d",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 2,
+      "sample_id": "3ioen3p9s7jsqm9zwse0cwyj3kq612",
+      "source": "race",
+      "turns": 15
+    },
+    {
+      "index": 3,
+      "sample_id": "36v4q8r5zk0iwte84nbw2t3d0qzqmg",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 4,
+      "sample_id": "3a1pq49wvhh8nbtgsb549nn9bzth12",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 5,
+      "sample_id": "3tayzsbpll8425psm9hhik4gdl02sc",
+      "source": "wikipedia",
+      "turns": 13
+    },
+    {
+      "index": 6,
+      "sample_id": "33lk57mylt5u8gs4bgqv5venyoxzs3",
+      "source": "race",
+      "turns": 12
+    },
+    {
+      "index": 7,
+      "sample_id": "3h8dhmccw9bthwa0epswnh4as77kdu",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 8,
+      "sample_id": "3tu5zicbrd13b4c4am1dxb2igltq8b",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 9,
+      "sample_id": "3jwh6j9i9sd1a5xjx6t6kjxekv8bnk",
+      "source": "cnn",
+      "turns": 10
+    },
+    {
+      "index": 10,
+      "sample_id": "3ymtujh0dsgfkjhufn5vl4x0zlct4w",
+      "source": "cnn",
+      "turns": 10
+    },
+    {
+      "index": 11,
+      "sample_id": "3eqhhy4hqsstbxzo9spyrdop9ks5gr",
+      "source": "wikipedia",
+      "turns": 17
+    },
+    {
+      "index": 12,
+      "sample_id": "3r08vxyt7cv4vn37cq8db0o9t2t7wy",
+      "source": "race",
+      "turns": 12
+    },
+    {
+      "index": 13,
+      "sample_id": "34yb12fsqyorj4ku1r6k8fzbubfmgm",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 14,
+      "sample_id": "3tem0pf1q5xr463wawie4xp1fe70dl",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 15,
+      "sample_id": "3w2lolrxlbfni6t5wqngs6le78akrc",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 16,
+      "sample_id": "3bv8hq2zzw1okamzsb7tnxrm7eha6f",
+      "source": "race",
+      "turns": 21
+    },
+    {
+      "index": 17,
+      "sample_id": "3s3amizx3u5byyycmcbyzyr2n63cdu",
+      "source": "mctest",
+      "turns": 20
+    },
+    {
+      "index": 18,
+      "sample_id": "3l6l49wxw0xdzh64ernxiormjaz459",
+      "source": "race",
+      "turns": 13
+    },
+    {
+      "index": 19,
+      "sample_id": "3txd01zld4hukwwjfsv5q0j2ixa4ul",
+      "source": "gutenberg",
+      "turns": 13
+    },
+    {
+      "index": 20,
+      "sample_id": "3vnl7uk1xfjpizejz41ec8urn5hftp",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 21,
+      "sample_id": "35bldd71i6xa08985bv0giyuwn3zv9",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 22,
+      "sample_id": "3g2ul9a02de618o1l8v9d6pw59j76y",
+      "source": "mctest",
+      "turns": 12
+    },
+    {
+      "index": 23,
+      "sample_id": "3kopy89hm820ok2l3fm89tilm4bj3n",
+      "source": "race",
+      "turns": 19
+    },
+    {
+      "index": 24,
+      "sample_id": "3uxuoq9okex7oa04blcltbri2v27ao",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 25,
+      "sample_id": "3z3zlgnnsiuha76yy56h6uu71bh3q1",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 26,
+      "sample_id": "31n2ww6r9rqkjigpkpvnuvqttxe3fo",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 27,
+      "sample_id": "3u4j9857oebc7k5whzchomboj9wb7n",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 28,
+      "sample_id": "34t446b1c0ehzexia0n3kr7junmc06",
+      "source": "wikipedia",
+      "turns": 16
+    },
+    {
+      "index": 29,
+      "sample_id": "3rwe2m8qwha0qiu9zqwh021vtpv0n3",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 30,
+      "sample_id": "3k4j6m3cxetqh3b54ogfzo4b1yaagj",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 31,
+      "sample_id": "31lm9edvols7sovvly6ni7grrs3njm",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 32,
+      "sample_id": "3strjbfxowr0yl6x0fsbslmwvuztks",
+      "source": "gutenberg",
+      "turns": 16
+    },
+    {
+      "index": 33,
+      "sample_id": "35gmh2sv3ehhzt9f8cv90g34dzqeow",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 34,
+      "sample_id": "3z3zlgnnsiuha76yy56h6uu707qq3o",
+      "source": "mctest",
+      "turns": 19
+    },
+    {
+      "index": 35,
+      "sample_id": "3l4d84milzsfis9ki0badnjv6pxjhv",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 36,
+      "sample_id": "3ydtzai2wxgebz5ld4llfye56nm141",
+      "source": "cnn",
+      "turns": 10
+    },
+    {
+      "index": 37,
+      "sample_id": "3ihr8nyam71hsrony6wbguw3agap42",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 38,
+      "sample_id": "3leiz60cdjzc31w52aq4o09x5yqz95",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 39,
+      "sample_id": "32z9zlut1lktj30hyd3flj0h4btoho",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 40,
+      "sample_id": "36w0ob37hwe5i7eo0mew1h7lpjjzhx",
+      "source": "gutenberg",
+      "turns": 18
+    },
+    {
+      "index": 41,
+      "sample_id": "3tu5zicbrd13b4c4am1dxb2ihx58qu",
+      "source": "wikipedia",
+      "turns": 13
+    },
+    {
+      "index": 42,
+      "sample_id": "38f5oaun5ncmyx8ihrmdaxemegg7h2",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 43,
+      "sample_id": "3nd9uoo81k23a8s9gk9nu56app6lw0",
+      "source": "wikipedia",
+      "turns": 12
+    },
+    {
+      "index": 44,
+      "sample_id": "3fe2ercczx8lwky5hqbkus28qw0pof",
+      "source": "gutenberg",
+      "turns": 15
+    },
+    {
+      "index": 45,
+      "sample_id": "3k9fobbf2hjdnejvoji0ymtjwminl9",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 46,
+      "sample_id": "3lrliptpeq9vjp7ouf1uxgw48jdakg",
+      "source": "gutenberg",
+      "turns": 13
+    },
+    {
+      "index": 47,
+      "sample_id": "3txwc2nhnzqf2par7iwws7cujv8s90",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 48,
+      "sample_id": "3ydtzai2wxgebz5ld4llfye57zv14z",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 49,
+      "sample_id": "3zazr5xv01ie1z38eu0vqqa5csaczz",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 50,
+      "sample_id": "3var3r6g1p10qszov999867i2qqo8t",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 51,
+      "sample_id": "3tui152zzbnl04sjb1syi1fa3v7q18",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 52,
+      "sample_id": "37m28k1j0qd08516cu1iw1wrtqjajf",
+      "source": "gutenberg",
+      "turns": 21
+    },
+    {
+      "index": 53,
+      "sample_id": "3z2r0dq0jhe3smkalexct301cwae2a",
+      "source": "wikipedia",
+      "turns": 14
+    },
+    {
+      "index": 54,
+      "sample_id": "3xiqgxaumc8jkn8xmv4zdj2g3fu7x9",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 55,
+      "sample_id": "3p529iw9kyl1zm6eqvznqhkauvzflx",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 56,
+      "sample_id": "3luy3gc63z0ebe6604uij6gd1e57p1",
+      "source": "cnn",
+      "turns": 13
+    },
+    {
+      "index": 57,
+      "sample_id": "3lq8puhqflsjnhpe0iqa1m4vs2rhij",
+      "source": "mctest",
+      "turns": 12
+    },
+    {
+      "index": 58,
+      "sample_id": "3ng53n1rlvjibsbpa9mox6c8c1n8p7",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 59,
+      "sample_id": "3os4rqucr9fpmdk2ziatceo5ho5bfz",
+      "source": "race",
+      "turns": 12
+    },
+    {
+      "index": 60,
+      "sample_id": "3g5w44veu7iwtgkrgft4t27767kgke",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 61,
+      "sample_id": "3zazr5xv01ie1z38eu0vqqa5cu0czt",
+      "source": "wikipedia",
+      "turns": 10
+    },
+    {
+      "index": 62,
+      "sample_id": "3ix2egzr7bjs7mnne5n4rrl1tuurjr",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 63,
+      "sample_id": "3vd82fohkqo22vp1clpeas31sk8oc2",
+      "source": "cnn",
+      "turns": 10
+    },
+    {
+      "index": 64,
+      "sample_id": "354p56de9k3bo6myslycebloosw7sp",
+      "source": "wikipedia",
+      "turns": 10
+    },
+    {
+      "index": 65,
+      "sample_id": "3j88r45b2gy8qtcxihygd5t137xpxr",
+      "source": "cnn",
+      "turns": 16
+    },
+    {
+      "index": 66,
+      "sample_id": "3yoh7bii097fbdam5asqt3ahtpzkv4",
+      "source": "cnn",
+      "turns": 10
+    },
+    {
+      "index": 67,
+      "sample_id": "39asuflu6x74t2n793i5jtuxot0xe4",
+      "source": "wikipedia",
+      "turns": 19
+    },
+    {
+      "index": 68,
+      "sample_id": "33m4ia01qg1t26scv925i0tg3oexrh",
+      "source": "mctest",
+      "turns": 17
+    },
+    {
+      "index": 69,
+      "sample_id": "3m1cvsfp605hus5j7klrt28d6hiqak",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 70,
+      "sample_id": "37xitheisw95z8hh4d6i4n863aecrr",
+      "source": "cnn",
+      "turns": 15
+    },
+    {
+      "index": 71,
+      "sample_id": "34hjijklp5wuxbljki5ammllw7l4vi",
+      "source": "gutenberg",
+      "turns": 14
+    },
+    {
+      "index": 72,
+      "sample_id": "3y9n9ss8lybnly2ttj0x6vn8iwtd37",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 73,
+      "sample_id": "3kjyx6qcm9bk0t44npsesoa4dxbjv9",
+      "source": "mctest",
+      "turns": 16
+    },
+    {
+      "index": 74,
+      "sample_id": "326o153bmiyqvwiqi3htpmr59gudez",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 75,
+      "sample_id": "3gu1kf0o4i11dq9wdl6yo829k9tpbc",
+      "source": "wikipedia",
+      "turns": 18
+    },
+    {
+      "index": 76,
+      "sample_id": "3uxuoq9okex7oa04blcltbri2vh7a3",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 77,
+      "sample_id": "3ymu66obin85rqjjauq7garfevnghr",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 78,
+      "sample_id": "33isqzvxppm1t6symggnfs9k2xwcch",
+      "source": "cnn",
+      "turns": 10
+    },
+    {
+      "index": 79,
+      "sample_id": "3sb5n7y3o34ugqdncmjmaisyr7d0gm",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 80,
+      "sample_id": "3ftop5warfo47s3oks4p7vkek7uj0q",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 81,
+      "sample_id": "3hfnh7hemhei4jimtkd1pojg4ddgq6",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 82,
+      "sample_id": "3auqqel7u5tdyn3i1hi8ajv8eju0vy",
+      "source": "mctest",
+      "turns": 14
+    },
+    {
+      "index": 83,
+      "sample_id": "3wakvudhuwgr3je2hqtctc3c8ld7us",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 84,
+      "sample_id": "3aapld8ucch9wv5puupeft644hvhtl",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 85,
+      "sample_id": "3ymtujh0dsgfkjhufn5vl4x0y7f4th",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 86,
+      "sample_id": "33nf62tlxj26kiasole7qfznyw9jkn",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 87,
+      "sample_id": "36wlnqg78zaxgzk647qnuw356sfbeh",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 88,
+      "sample_id": "36v4q8r5zk0iwte84nbw2t3d1xrmqj",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 89,
+      "sample_id": "336yqze83vet37vakvnt4i8m434m59",
+      "source": "mctest",
+      "turns": 15
+    },
+    {
+      "index": 90,
+      "sample_id": "3ob0cao74hp5dh4j40cdnayjjsghyv",
+      "source": "cnn",
+      "turns": 11
+    },
+    {
+      "index": 91,
+      "sample_id": "3lpw2n6lkt2cgf0jtxefvspgis25um",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 92,
+      "sample_id": "3qapzx2qn4d41w5gd7yx8eyxhjr20e",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 93,
+      "sample_id": "39u1bhvtdlru2nyqf90cbz5ukfdt3v",
+      "source": "mctest",
+      "turns": 13
+    },
+    {
+      "index": 94,
+      "sample_id": "3a9aa95atwmzoasncbfllm2h90e5p7",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 95,
+      "sample_id": "3dpnqgw4llf9il6ijax2au5mf4764m",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 96,
+      "sample_id": "3x87c8jfv6bluordok7ie22jto0qsu",
+      "source": "cnn",
+      "turns": 18
+    },
+    {
+      "index": 97,
+      "sample_id": "3azhrg4cu4ktme1zh7c2ro3po9a30y",
+      "source": "gutenberg",
+      "turns": 17
+    },
+    {
+      "index": 98,
+      "sample_id": "3nql1cs15r8aviz39pth2bpsr4zvy1",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 99,
+      "sample_id": "3efvcay5l39mph8rfwh40aqw343j88",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 100,
+      "sample_id": "35l9rvqfcoiow8keuzfokps6n55huz",
+      "source": "gutenberg",
+      "turns": 14
+    },
+    {
+      "index": 101,
+      "sample_id": "3pjuzcgdj6gxj5vitkqrbgct6kk890",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 102,
+      "sample_id": "36v4q8r5zk0iwte84nbw2t3d14jmqp",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 103,
+      "sample_id": "3ikz72a5b4grnm9z28f239ozzl9fnz",
+      "source": "race",
+      "turns": 11
+    },
+    {
+      "index": 104,
+      "sample_id": "3c6fju71tqtai3a34zjc6pn9dxjuy4",
+      "source": "gutenberg",
+      "turns": 11
+    },
+    {
+      "index": 105,
+      "sample_id": "3634bbtx0ouz9ly85s2ay1sidrifiw",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 106,
+      "sample_id": "36dsne9qz5ypa9v7md60xwgwi91oja",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 107,
+      "sample_id": "3k2755hg5s3i1aimde1z74c5kc0fdz",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 108,
+      "sample_id": "3fe7txl1linsppafu5scnkpfvoq2qg",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 109,
+      "sample_id": "3a0ex8zrn8ovm41x482h1zvlof2by0",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 110,
+      "sample_id": "3c2nj6jbkah7msxned0vjquaqpi2nw",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 111,
+      "sample_id": "3a0ex8zrn8ovm41x482h1zvlo3vby5",
+      "source": "wikipedia",
+      "turns": 12
+    },
+    {
+      "index": 112,
+      "sample_id": "3gu1kf0o4i11dq9wdl6yo829k14pb7",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 113,
+      "sample_id": "3x0h8uuit1oqelnz0t6o6rk5hugsw9",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 114,
+      "sample_id": "3a1cohj8njvqybd1rwejoxahqdwh80",
+      "source": "wikipedia",
+      "turns": 15
+    },
+    {
+      "index": 115,
+      "sample_id": "3nql1cs15r8aviz39pth2bpsq0fvy8",
+      "source": "mctest",
+      "turns": 13
+    },
+    {
+      "index": 116,
+      "sample_id": "3vfjci1k4zzigkxm6z21uetl16prg7",
+      "source": "race",
+      "turns": 13
+    },
+    {
+      "index": 117,
+      "sample_id": "3s3amizx3u5byyycmcbyzyr2o96cd4",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 118,
+      "sample_id": "3ryc5t2d73totxql9isoon7d2tvrpm",
+      "source": "cnn",
+      "turns": 13
+    },
+    {
+      "index": 119,
+      "sample_id": "3hosi13xhzol3q4qm869j49k94xdda",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 120,
+      "sample_id": "3tdxmtx3cbu3qs5x4zz64vf5jpxi67",
+      "source": "mctest",
+      "turns": 15
+    },
+    {
+      "index": 121,
+      "sample_id": "3c2nj6jbkah7msxned0vjquaphjn21",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 122,
+      "sample_id": "3velcll3gkjo9f2axlh462bwvkaf1w",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 123,
+      "sample_id": "3m0nz3jdp1yt2eutzkdnck4vjynz5m",
+      "source": "cnn",
+      "turns": 15
+    },
+    {
+      "index": 124,
+      "sample_id": "34z02eimisdylvztwmit917niam0tf",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 125,
+      "sample_id": "33cusnvvnncx50c8oskdbkhinmz88p",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 126,
+      "sample_id": "3qavnhz3em463vp6ffdvcg9jx96lay",
+      "source": "race",
+      "turns": 12
+    },
+    {
+      "index": 127,
+      "sample_id": "3rrcefrb7mcfoxndf1ealaretbbb4h",
+      "source": "gutenberg",
+      "turns": 21
+    },
+    {
+      "index": 128,
+      "sample_id": "3p59jyt76lk5h527b9m7sp02f2n2t6",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 129,
+      "sample_id": "3nc5l260mom9579b3nffiyo4px4ofh",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 130,
+      "sample_id": "3rxpczqmqpbunfy585nmonb8x5q1ga",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 131,
+      "sample_id": "3vp0c6efsgwpmbvopexywomm139m6u",
+      "source": "gutenberg",
+      "turns": 15
+    },
+    {
+      "index": 132,
+      "sample_id": "33lk57mylt5u8gs4bgqv5venyuqsz1",
+      "source": "cnn",
+      "turns": 16
+    },
+    {
+      "index": 133,
+      "sample_id": "3180jw2ot4c32zpphya1oqg51d6j58",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 134,
+      "sample_id": "3skro2gz71rzp1uoyw81mf313gy1kr",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 135,
+      "sample_id": "3l70j4kazgmn5j1e2yf7t31eox1da1",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 136,
+      "sample_id": "36nemu28xfdngqaugwa2uilzoskmwm",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 137,
+      "sample_id": "3cfjtt4sxtqmusj2n94ya9f1f0f7iu",
+      "source": "cnn",
+      "turns": 15
+    },
+    {
+      "index": 138,
+      "sample_id": "3lpw2n6lkt2cgf0jtxefvspgho7u57",
+      "source": "mctest",
+      "turns": 12
+    },
+    {
+      "index": 139,
+      "sample_id": "3gdtjdapvubcqpecituwg2id7wk8mj",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 140,
+      "sample_id": "3r6byfzzp7cwzgn34e2b1bfx1y9xfp",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 141,
+      "sample_id": "39rp059mehtvsncjl5e6748ef20bmg",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 142,
+      "sample_id": "3ng53n1rlvjibsbpa9mox6c8c1xp8y",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 143,
+      "sample_id": "3xc1o3lbosmbiroflf4c7lzbl5xlt3",
+      "source": "gutenberg",
+      "turns": 11
+    },
+    {
+      "index": 144,
+      "sample_id": "3ftyuglfsulqzdpx72oqlslswtcd5r",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 145,
+      "sample_id": "3e47sobeyqws69eyeqc9qv7fghdcib",
+      "source": "cnn",
+      "turns": 12
+    },
+    {
+      "index": 146,
+      "sample_id": "32ktq2v7rdfc4uxmnl0agydort19mq",
+      "source": "wikipedia",
+      "turns": 14
+    },
+    {
+      "index": 147,
+      "sample_id": "3uj1cz6izhpw128f4sjfgr7swkws5l",
+      "source": "gutenberg",
+      "turns": 17
+    },
+    {
+      "index": 148,
+      "sample_id": "39gaf6dqwr0d5co0x0m8ooeiklzv1g",
+      "source": "wikipedia",
+      "turns": 13
+    },
+    {
+      "index": 149,
+      "sample_id": "34pgfrqonobxfi49dzxaeqtil33jw4",
+      "source": "race",
+      "turns": 14
+    },
+    {
+      "index": 150,
+      "sample_id": "34bbwhlwhab1k7k3vhca2pei8rowil",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 151,
+      "sample_id": "3r0t90iz1sceai83o2c65juz0xhgc4",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 152,
+      "sample_id": "3olf68ytn91k33fat4axh34z0mqfab",
+      "source": "wikipedia",
+      "turns": 15
+    },
+    {
+      "index": 153,
+      "sample_id": "3tgoyf991xmt1uqyuymn34hwh1euuw",
+      "source": "wikipedia",
+      "turns": 17
+    },
+    {
+      "index": 154,
+      "sample_id": "3rxpczqmqpbunfy585nmonb8w0j1gs",
+      "source": "mctest",
+      "turns": 15
+    },
+    {
+      "index": 155,
+      "sample_id": "3x08e93bhvinx8aw2yqh7sp0by5665",
+      "source": "cnn",
+      "turns": 19
+    },
+    {
+      "index": 156,
+      "sample_id": "3copxfw7xbc26tdqjyjrnblz6rcpkh",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 157,
+      "sample_id": "354p56de9k3bo6myslycebloo147sf",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 158,
+      "sample_id": "3duzq9u6smodzwnuaj1skp1rajkvs4",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 159,
+      "sample_id": "31q0u3wydpfbumn4f2jsiayfy1871c",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 160,
+      "sample_id": "36zn444ytrytfyb14vl0lv1w4i6oi3",
+      "source": "gutenberg",
+      "turns": 15
+    },
+    {
+      "index": 161,
+      "sample_id": "3ymu66obin85rqjjauq7garfdpphgh",
+      "source": "mctest",
+      "turns": 13
+    },
+    {
+      "index": 162,
+      "sample_id": "3snlul3wo4nqi434lkumchld4juult",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 163,
+      "sample_id": "3txwc2nhnzqf2par7iwws7cujqfs9x",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 164,
+      "sample_id": "39zsfo5ca8wknef4izi9w28lzgujus",
+      "source": "race",
+      "turns": 21
+    },
+    {
+      "index": 165,
+      "sample_id": "34s9dkfk73pxndqu7y7qsuvf5ylyn5",
+      "source": "cnn",
+      "turns": 17
+    },
+    {
+      "index": 166,
+      "sample_id": "3njm2bjs4w6knv12rl2tzs8r2pscpv",
+      "source": "cnn",
+      "turns": 14
+    },
+    {
+      "index": 167,
+      "sample_id": "3z2r0dq0jhe3smkalexct301cxq2eg",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 168,
+      "sample_id": "3ekvh9qmey4y0g6apjmsnligcd6d2z",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 169,
+      "sample_id": "3txwc2nhnzqf2par7iwws7cuio59sz",
+      "source": "mctest",
+      "turns": 13
+    },
+    {
+      "index": 170,
+      "sample_id": "31hq4x3t3saa3rb0wfzmxg3piinls9",
+      "source": "mctest",
+      "turns": 12
+    },
+    {
+      "index": 171,
+      "sample_id": "3wyp994k17rpgsk28hl9qj9ta6ey69",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 172,
+      "sample_id": "3kopy89hm820ok2l3fm89tilnhh3j4",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 173,
+      "sample_id": "3vj40nv2qinjocrcy7k4z235g0ktoq",
+      "source": "wikipedia",
+      "turns": 15
+    },
+    {
+      "index": 174,
+      "sample_id": "373erpl3yo8mlpjsqz18tx8arqutrv",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 175,
+      "sample_id": "3m0nz3jdp1yt2eutzkdnck4vj6kz5z",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 176,
+      "sample_id": "3jv9lgbjwtefj756e7lx0jogqf0goa",
+      "source": "wikipedia",
+      "turns": 16
+    },
+    {
+      "index": 177,
+      "sample_id": "3suwzrl0mydran3b8g9fjghdsz46e7",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 178,
+      "sample_id": "3g5w44veu7iwtgkrgft4t2776cnkgv",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 179,
+      "sample_id": "3qjoxow4xjrtzqo3vwgw8cezi27mer",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 180,
+      "sample_id": "30og32w0subzh8937xvwlr3znpzenv",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 181,
+      "sample_id": "3tmsxrd2x60qk1o5nar4aqxwqir1wx",
+      "source": "gutenberg",
+      "turns": 15
+    },
+    {
+      "index": 182,
+      "sample_id": "3m23y66po27sk68t9btk8xlstnps60",
+      "source": "cnn",
+      "turns": 14
+    },
+    {
+      "index": 183,
+      "sample_id": "3kjyx6qcm9bk0t44npsesoa4e4mvjb",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 184,
+      "sample_id": "3x08e93bhvinx8aw2yqh7sp0bv166v",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 185,
+      "sample_id": "3i7dhkzygn0nxx3ty8jg9sod70l5fa",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 186,
+      "sample_id": "3atpcq38j8aq3uw5yu2l6obf6w8yah",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 187,
+      "sample_id": "3tk8ojtym1lgm472i2xypkwgnt8pv1",
+      "source": "race",
+      "turns": 19
+    },
+    {
+      "index": 188,
+      "sample_id": "3ejjqnku9r5wggsxq5kjfe5mfyrrhe",
+      "source": "mctest",
+      "turns": 16
+    },
+    {
+      "index": 189,
+      "sample_id": "37w3jxsd668na7z8zzydod86x3zywr",
+      "source": "wikipedia",
+      "turns": 10
+    },
+    {
+      "index": 190,
+      "sample_id": "32at8r96gl9dmhyu5trno3z8wc6su7",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 191,
+      "sample_id": "3dip6yhapcsee1mz1v6d3ud4yuve82",
+      "source": "wikipedia",
+      "turns": 13
+    },
+    {
+      "index": 192,
+      "sample_id": "3snvl38ci4sjc44metxl3bms76nckc",
+      "source": "race",
+      "turns": 19
+    },
+    {
+      "index": 193,
+      "sample_id": "354p56de9k3bo6myslyceblont27sw",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 194,
+      "sample_id": "3bv8hq2zzw1okamzsb7tnxrm7i66a8",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 195,
+      "sample_id": "3l4pim1gqtgi2bim05o71e0p6vfyry",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 196,
+      "sample_id": "3iuzpwiu1o7sq2arvkxmf5tv0xokwz",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 197,
+      "sample_id": "374tnbha8bviqa3mnqz7woqka65yqj",
+      "source": "race",
+      "turns": 17
+    },
+    {
+      "index": 198,
+      "sample_id": "3ywrv122cszv3xjlrvli7cz7kmh8ud",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 199,
+      "sample_id": "3tayzsbpll8425psm9hhik4gcb5s2m",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 200,
+      "sample_id": "30zx6p7vf8vb3262zf83qjdthuxj27",
+      "source": "wikipedia",
+      "turns": 14
+    },
+    {
+      "index": 201,
+      "sample_id": "3efvcay5l39mph8rfwh40aqw347j8c",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 202,
+      "sample_id": "3bdcf01ogxu7zdn9vlrbf2rq00jlyi",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 203,
+      "sample_id": "3gu1kf0o4i11dq9wdl6yo829jv9pbz",
+      "source": "cnn",
+      "turns": 11
+    },
+    {
+      "index": 204,
+      "sample_id": "3mrnmeiqw56412sizp4x2hhpidqldp",
+      "source": "race",
+      "turns": 15
+    },
+    {
+      "index": 205,
+      "sample_id": "3g0wwmr1uvkoebz8goqwf8sd5pzqno",
+      "source": "mctest",
+      "turns": 19
+    },
+    {
+      "index": 206,
+      "sample_id": "3eicbyg644wo1ky4w8x92wmftuhcjy",
+      "source": "gutenberg",
+      "turns": 14
+    },
+    {
+      "index": 207,
+      "sample_id": "3ojsz2atdswai4ongpl4l0bwahk57z",
+      "source": "gutenberg",
+      "turns": 14
+    },
+    {
+      "index": 208,
+      "sample_id": "3iuzpwiu1o7sq2arvkxmf5tvzm4wk4",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 209,
+      "sample_id": "3q5zz9zevofeiit6qudaz07rlzy85t",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 210,
+      "sample_id": "36zn444ytrytfyb14vl0lv1w5udiot",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 211,
+      "sample_id": "3nd9uoo81k23a8s9gk9nu56aomawl8",
+      "source": "race",
+      "turns": 14
+    },
+    {
+      "index": 212,
+      "sample_id": "3gna64guze4komt2coualrsrf7o5q9",
+      "source": "wikipedia",
+      "turns": 12
+    },
+    {
+      "index": 213,
+      "sample_id": "3un61f00hwpk0n82p3jaqh2wbv1r5b",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 214,
+      "sample_id": "3dl65mzb8dfgq4cci7mi5g9nonscem",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 215,
+      "sample_id": "3bv8hq2zzw1okamzsb7tnxrm7kfa6p",
+      "source": "cnn",
+      "turns": 12
+    },
+    {
+      "index": 216,
+      "sample_id": "3x31tumd7xma97c6jwk21fggtcp1l9",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 217,
+      "sample_id": "3fprzhyepy79ff2fk40rchtfi3n3vm",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 218,
+      "sample_id": "3x66wabajwiqxickv915cgq5voj3gh",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 219,
+      "sample_id": "3sepori8wnzq8k6aug44kvkhcjazat",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 220,
+      "sample_id": "3zpbjo59kp12f69s84pzapoi11odhr",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 221,
+      "sample_id": "3i2pta7r3tun65e5jbygngb9c04kq0",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 222,
+      "sample_id": "3r08vxyt7cv4vn37cq8db0o9t947wn",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 223,
+      "sample_id": "3rsdurm96amtt7dhez472716ragey0",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 224,
+      "sample_id": "3uwn2hhpuy50rrel8sf1a87enbansw",
+      "source": "mctest",
+      "turns": 13
+    },
+    {
+      "index": 225,
+      "sample_id": "3y9n9ss8lybnly2ttj0x6vn8itwd34",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 226,
+      "sample_id": "32riadziss4e5j4fqn05bz1ex1p4s7",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 227,
+      "sample_id": "3c2nj6jbkah7msxned0vjquaqh12nz",
+      "source": "race",
+      "turns": 19
+    },
+    {
+      "index": 228,
+      "sample_id": "33jkghpfycuxtw1govjfyz88vnknme",
+      "source": "mctest",
+      "turns": 14
+    },
+    {
+      "index": 229,
+      "sample_id": "336kav9kyqs1yr11lf9606shu0wy2a",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 230,
+      "sample_id": "3kgtpgbs6xlkhihwbechxlm4xfhu29",
+      "source": "mctest",
+      "turns": 20
+    },
+    {
+      "index": 231,
+      "sample_id": "35gcefq6i5oqoz7pl1puxn6b53o3zu",
+      "source": "cnn",
+      "turns": 16
+    },
+    {
+      "index": 232,
+      "sample_id": "3cp1to84pt13w3rhad49p9uoz2c25w",
+      "source": "gutenberg",
+      "turns": 13
+    },
+    {
+      "index": 233,
+      "sample_id": "3xlbsaq9z4c8pi8cndska4irbksz78",
+      "source": "race",
+      "turns": 13
+    },
+    {
+      "index": 234,
+      "sample_id": "32n49tqg3gi9z010tjf1zp7lodlvag",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 235,
+      "sample_id": "3r3yrb5grf39mlc0ot5w3352913ua6",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 236,
+      "sample_id": "336yqze83vet37vakvnt4i8m5645mz",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 237,
+      "sample_id": "3quo65dnquoyop61ycae4yp7zexuoo",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 238,
+      "sample_id": "3z4xg4zf48rnk1dgw0w5rjybe2o8xr",
+      "source": "gutenberg",
+      "turns": 11
+    },
+    {
+      "index": 239,
+      "sample_id": "35bldd71i6xa08985bv0giyux1hzvg",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 240,
+      "sample_id": "3kgtpgbs6xlkhihwbechxlm4ymh2uw",
+      "source": "gutenberg",
+      "turns": 18
+    },
+    {
+      "index": 241,
+      "sample_id": "3hrmw88u16qu8099nphhnncvov10mb",
+      "source": "cnn",
+      "turns": 10
+    },
+    {
+      "index": 242,
+      "sample_id": "3sle99er0ndvrub20u40f64nu75zba",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 243,
+      "sample_id": "3s4aw7t80bir169p6e34zdnj50y4lw",
+      "source": "race",
+      "turns": 16
+    },
+    {
+      "index": 244,
+      "sample_id": "3jjvg1ybebxxkgrdt6xkq2xss4y5b1",
+      "source": "mctest",
+      "turns": 12
+    },
+    {
+      "index": 245,
+      "sample_id": "3skro2gz71rzp1uoyw81mf313gu1kn",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 246,
+      "sample_id": "3qxnc7eipivf1gqfygdci16bnvn90b",
+      "source": "mctest",
+      "turns": 13
+    },
+    {
+      "index": 247,
+      "sample_id": "3zv9h2yqqd7mu42kae5nyjctpgp3w4",
+      "source": "gutenberg",
+      "turns": 17
+    },
+    {
+      "index": 248,
+      "sample_id": "3snvl38ci4sjc44metxl3bms8ijkc5",
+      "source": "cnn",
+      "turns": 17
+    },
+    {
+      "index": 249,
+      "sample_id": "3lya37p8iqn02zcg0t1qsrgaqutkb2",
+      "source": "cnn",
+      "turns": 12
+    },
+    {
+      "index": 250,
+      "sample_id": "30h4udglt2ixwhdt4aw72od3v35pmy",
+      "source": "mctest",
+      "turns": 17
+    },
+    {
+      "index": 251,
+      "sample_id": "3skemfqbz35h01e9xhhg1pq9hoe8kw",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 252,
+      "sample_id": "320duz38g7m1iwe9yutssn7uq8ajgn",
+      "source": "race",
+      "turns": 19
+    },
+    {
+      "index": 253,
+      "sample_id": "3snvl38ci4sjc44metxl3bms7eyck3",
+      "source": "mctest",
+      "turns": 17
+    },
+    {
+      "index": 254,
+      "sample_id": "3velcll3gkjo9f2axlh462bwwo01fh",
+      "source": "wikipedia",
+      "turns": 19
+    },
+    {
+      "index": 255,
+      "sample_id": "3e47sobeyqws69eyeqc9qv7fg5kic0",
+      "source": "wikipedia",
+      "turns": 13
+    },
+    {
+      "index": 256,
+      "sample_id": "3ekvh9qmey4y0g6apjmsnligbdj2d0",
+      "source": "mctest",
+      "turns": 17
+    },
+    {
+      "index": 257,
+      "sample_id": "3ctoc39k37qip3385rpymau1r757jq",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 258,
+      "sample_id": "3dl65mzb8dfgq4cci7mi5g9nn8mecn",
+      "source": "race",
+      "turns": 13
+    },
+    {
+      "index": 259,
+      "sample_id": "36ahbnmv1rco11zhi4tnwpjlr0kyd0",
+      "source": "cnn",
+      "turns": 13
+    },
+    {
+      "index": 260,
+      "sample_id": "378xpawrucd4duh0ucgik0hrgbpia6",
+      "source": "wikipedia",
+      "turns": 16
+    },
+    {
+      "index": 261,
+      "sample_id": "35gmh2sv3ehhzt9f8cv90g34cvjeog",
+      "source": "mctest",
+      "turns": 12
+    },
+    {
+      "index": 262,
+      "sample_id": "3uwn2hhpuy50rrel8sf1a87enclns9",
+      "source": "mctest",
+      "turns": 16
+    },
+    {
+      "index": 263,
+      "sample_id": "37u1utwh9vm3n5r4n1qd21cncf0r8y",
+      "source": "mctest",
+      "turns": 13
+    },
+    {
+      "index": 264,
+      "sample_id": "3befod78w6tb7ora6q4jzq284yi4md",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 265,
+      "sample_id": "3d3vgr7ta0fhm8lybkvhbk4cwkur3a",
+      "source": "race",
+      "turns": 18
+    },
+    {
+      "index": 266,
+      "sample_id": "36dsne9qz5ypa9v7md60xwgwi49jo3",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 267,
+      "sample_id": "3hrmw88u16qu8099nphhnncvnnpm04",
+      "source": "cnn",
+      "turns": 13
+    },
+    {
+      "index": 268,
+      "sample_id": "3vsolarpkb9bi8pch3vvkz4iq1k391",
+      "source": "gutenberg",
+      "turns": 12
+    },
+    {
+      "index": 269,
+      "sample_id": "37fmassaycr9w4ms0qgefb1xyvxibs",
+      "source": "wikipedia",
+      "turns": 17
+    },
+    {
+      "index": 270,
+      "sample_id": "3634bbtx0ouz9ly85s2ay1sico1ifb",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 271,
+      "sample_id": "3xc1o3lbosmbiroflf4c7lzbly6lty",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 272,
+      "sample_id": "3bxqmrhwkzyaomlplwv1cu024ijumi",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 273,
+      "sample_id": "3zwfc4w1uu7c2k1rvfwjctt9zjxfrn",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 274,
+      "sample_id": "3kms4qqvk2qqfgow5vnmbh7v4spkfn",
+      "source": "mctest",
+      "turns": 25
+    },
+    {
+      "index": 275,
+      "sample_id": "3zy8ke4isj31mg8hifcnppmqrs1qv5",
+      "source": "mctest",
+      "turns": 14
+    },
+    {
+      "index": 276,
+      "sample_id": "38jbbyetqoadv0zxpsg0mixzwa6e46",
+      "source": "wikipedia",
+      "turns": 18
+    },
+    {
+      "index": 277,
+      "sample_id": "3pdjhanyk5g3uxudyhhl4jeqkha6h5",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 278,
+      "sample_id": "3suwzrl0mydran3b8g9fjghds2de6u",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 279,
+      "sample_id": "3ymtujh0dsgfkjhufn5vl4x0y5wt4j",
+      "source": "race",
+      "turns": 12
+    },
+    {
+      "index": 280,
+      "sample_id": "3ve8ayvf8mx6kfmvw6qjlcy49lyf8o",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 281,
+      "sample_id": "3p4rdnwnd56fenk4oitvdzka6vljij",
+      "source": "cnn",
+      "turns": 15
+    },
+    {
+      "index": 282,
+      "sample_id": "39n5acm9henipxuzf1s2x27jvx8p9v",
+      "source": "gutenberg",
+      "turns": 14
+    },
+    {
+      "index": 283,
+      "sample_id": "3m23y66po27sk68t9btk8xlstkw6sf",
+      "source": "race",
+      "turns": 16
+    },
+    {
+      "index": 284,
+      "sample_id": "3oe22wjigio191jhdp2it3k7de6qug",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 285,
+      "sample_id": "3s96kq6i9m4skf0n8y6oo8r6cxwdti",
+      "source": "gutenberg",
+      "turns": 16
+    },
+    {
+      "index": 286,
+      "sample_id": "3velcll3gkjo9f2axlh462bwwg31f4",
+      "source": "wikipedia",
+      "turns": 12
+    },
+    {
+      "index": 287,
+      "sample_id": "3spj033421314nz9s0fyzneyvddjyg",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 288,
+      "sample_id": "3wjeqkoxa82tdol2m5vcs105zcfa1d",
+      "source": "cnn",
+      "turns": 19
+    },
+    {
+      "index": 289,
+      "sample_id": "3wrfbplxraow7at6ide020z2w3tn33",
+      "source": "cnn",
+      "turns": 10
+    },
+    {
+      "index": 290,
+      "sample_id": "374tnbha8bviqa3mnqz7woqk90aqy3",
+      "source": "cnn",
+      "turns": 11
+    },
+    {
+      "index": 291,
+      "sample_id": "3qilpralq5vi87zcuu9wth7dcoan8i",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 292,
+      "sample_id": "3hmigg0u4l6ck63q1wi7ax5kfwwy8c",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 293,
+      "sample_id": "3y5140z9dxgb0yn2jvyfav6metnpii",
+      "source": "mctest",
+      "turns": 20
+    },
+    {
+      "index": 294,
+      "sample_id": "3ywrv122cszv3xjlrvli7cz7kiy8um",
+      "source": "cnn",
+      "turns": 16
+    },
+    {
+      "index": 295,
+      "sample_id": "3d3vgr7ta0fhm8lybkvhbk4cwtb3rl",
+      "source": "mctest",
+      "turns": 20
+    },
+    {
+      "index": 296,
+      "sample_id": "3v5q80fxixr0io4dwuggacw4l7r32f",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 297,
+      "sample_id": "3wygz5xf3wfzjltibfnligqaulzkst",
+      "source": "wikipedia",
+      "turns": 10
+    },
+    {
+      "index": 298,
+      "sample_id": "3b3wtrp3db2mxqttd3hq1pzqlrc92x",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 299,
+      "sample_id": "31uv0mxwnqc77o5jzgp1cp15oz95ic",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 300,
+      "sample_id": "31lvtdxbl7ay2cbnhqzh76ytxkxrlt",
+      "source": "gutenberg",
+      "turns": 15
+    },
+    {
+      "index": 301,
+      "sample_id": "3zr9aiqjub9e4ak3hlhl1tvv1xy04j",
+      "source": "gutenberg",
+      "turns": 13
+    },
+    {
+      "index": 302,
+      "sample_id": "3lq8puhqflsjnhpe0iqa1m4vt3jhie",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 303,
+      "sample_id": "3kibxj1wd5uklt1p4y6cybg9wmhok0",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 304,
+      "sample_id": "3ochawuvgok7f2fh5pt8ho7294rxkc",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 305,
+      "sample_id": "3bdcf01ogxu7zdn9vlrbf2rqz14ylh",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 306,
+      "sample_id": "3gm6g9zbknxvo960lr5r7ye0k5smt0",
+      "source": "mctest",
+      "turns": 19
+    },
+    {
+      "index": 307,
+      "sample_id": "3yz8upk3vtmxf09y871n9yvqadwcuh",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 308,
+      "sample_id": "3g5f9dbfopxo9n9ezpptgbup0xavh3",
+      "source": "cnn",
+      "turns": 14
+    },
+    {
+      "index": 309,
+      "sample_id": "3w2lolrxlbfni6t5wqngs6le8gskrb",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 310,
+      "sample_id": "3kyqyyshyv7c7nvfchkpuyljdkmdot",
+      "source": "cnn",
+      "turns": 15
+    },
+    {
+      "index": 311,
+      "sample_id": "34fnn24dcm9txoko3yb4ydvtefry5p",
+      "source": "wikipedia",
+      "turns": 13
+    },
+    {
+      "index": 312,
+      "sample_id": "3f0bg9b9mpn8ksy7rrq1wx9p4h0y79",
+      "source": "mctest",
+      "turns": 20
+    },
+    {
+      "index": 313,
+      "sample_id": "3rrcefrb7mcfoxndf1ealaresyfb4u",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 314,
+      "sample_id": "3z4airp3c6d591tvxfnqc9b3zm51x2",
+      "source": "mctest",
+      "turns": 17
+    },
+    {
+      "index": 315,
+      "sample_id": "34j10vatjfyw0aohj8d4a0wwjhgiqt",
+      "source": "cnn",
+      "turns": 22
+    },
+    {
+      "index": 316,
+      "sample_id": "3y54sxro1lle1hb9utwdy8vuyvituv",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 317,
+      "sample_id": "3lpw2n6lkt2cgf0jtxefvspgiv25us",
+      "source": "wikipedia",
+      "turns": 14
+    },
+    {
+      "index": 318,
+      "sample_id": "3xm0hyn6nkzzktlgnc8opg8um1hpec",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 319,
+      "sample_id": "3a1cohj8njvqybd1rwejoxahp788hq",
+      "source": "mctest",
+      "turns": 13
+    },
+    {
+      "index": 320,
+      "sample_id": "3qecw5o0kh1xg2lutso5qw3ez865tu",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 321,
+      "sample_id": "3tdxmtx3cbu3qs5x4zz64vf5kpsi63",
+      "source": "cnn",
+      "turns": 18
+    },
+    {
+      "index": 322,
+      "sample_id": "3z3zlgnnsiuha76yy56h6uu712v3qx",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 323,
+      "sample_id": "3s3amizx3u5byyycmcbyzyr2o67cdz",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 324,
+      "sample_id": "3pptzcwalqkiv0drjc1qavzmf27zqc",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 325,
+      "sample_id": "3d3vgr7ta0fhm8lybkvhbk4cwter3c",
+      "source": "mctest",
+      "turns": 20
+    },
+    {
+      "index": 326,
+      "sample_id": "3ii4upycoj7fsz8vructj3gjrkwdqq",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 327,
+      "sample_id": "30og32w0subzh8937xvwlr3znpknep",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 328,
+      "sample_id": "35ldd5557a4wlqgdrirz67r42w6km6",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 329,
+      "sample_id": "3018q3zvoiqh6tkjkzarysii2vbarg",
+      "source": "cnn",
+      "turns": 12
+    },
+    {
+      "index": 330,
+      "sample_id": "3e47sobeyqws69eyeqc9qv7fgb9civ",
+      "source": "cnn",
+      "turns": 12
+    },
+    {
+      "index": 331,
+      "sample_id": "3r2ur8a0iagq5t0w3hl1o5obt8sxol",
+      "source": "wikipedia",
+      "turns": 15
+    },
+    {
+      "index": 332,
+      "sample_id": "3kxir214i4gl0knhw8lzkhoaz8m240",
+      "source": "wikipedia",
+      "turns": 14
+    },
+    {
+      "index": 333,
+      "sample_id": "3xuhv3nrvky7btuzty7gcd0qng1h5p",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 334,
+      "sample_id": "3dy4fpooa1o1yhnhvu1nufwvn4rrvb",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 335,
+      "sample_id": "3wrfbplxraow7at6ide020z2vvc3nl",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 336,
+      "sample_id": "3v26sbztbder9sei68k31obqk4qzz2",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 337,
+      "sample_id": "3l4d84milzsfis9ki0badnjv5gnhj0",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 338,
+      "sample_id": "3var3r6g1p10qszov999867i2zq8ov",
+      "source": "cnn",
+      "turns": 15
+    },
+    {
+      "index": 339,
+      "sample_id": "3q5zz9zevofeiit6qudaz07rkqq58z",
+      "source": "gutenberg",
+      "turns": 16
+    },
+    {
+      "index": 340,
+      "sample_id": "3a7y0r2p2ooc4i9zn4twg97pucmxj2",
+      "source": "gutenberg",
+      "turns": 11
+    },
+    {
+      "index": 341,
+      "sample_id": "3w92k5rlwuhctupjynokrerzwu05vq",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 342,
+      "sample_id": "3p59jyt76lk5h527b9m7sp02fzkt2o",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 343,
+      "sample_id": "33tin5lc04acybm06oolat0v0f99yy",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 344,
+      "sample_id": "3tvss0c0e10rtl0eptbegwgri72wtx",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 345,
+      "sample_id": "3yz8upk3vtmxf09y871n9yvqa86cuh",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 346,
+      "sample_id": "3kxir214i4gl0knhw8lzkhoaz9342l",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 347,
+      "sample_id": "3qrymnz7fyh16rr0xskrkd30pvwntv",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 348,
+      "sample_id": "3z2r0dq0jhe3smkalexct301crj2ex",
+      "source": "cnn",
+      "turns": 10
+    },
+    {
+      "index": 349,
+      "sample_id": "3uxuoq9okex7oa04blcltbri2x27as",
+      "source": "wikipedia",
+      "turns": 17
+    },
+    {
+      "index": 350,
+      "sample_id": "3zy8ke4isj31mg8hifcnppmqsp8vqc",
+      "source": "race",
+      "turns": 12
+    },
+    {
+      "index": 351,
+      "sample_id": "3dpnqgw4llf9il6ijax2au5mfcl46e",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 352,
+      "sample_id": "3ws1nttkeyco2qhs12d4sxsmrxdf0d",
+      "source": "cnn",
+      "turns": 10
+    },
+    {
+      "index": 353,
+      "sample_id": "317hq483i7sbxdbp3gln661refnini",
+      "source": "mctest",
+      "turns": 14
+    },
+    {
+      "index": 354,
+      "sample_id": "3lozaj85yddcymbrgjn4hsl8s2i2x4",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 355,
+      "sample_id": "3zppdn2slvwes6596ncr3q8fhwc9ec",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 356,
+      "sample_id": "3npfyt4izc42dgjyfy8tjwf917jgx4",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 357,
+      "sample_id": "3wz36bjev3gz5i23u2fiti3694dbtm",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 358,
+      "sample_id": "3io1lgzlk9xa1mtkvdnfr6lrhv2682",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 359,
+      "sample_id": "3ql2ofsm96ikkappb6p1v33w133nc7",
+      "source": "gutenberg",
+      "turns": 13
+    },
+    {
+      "index": 360,
+      "sample_id": "35k3o9huabdntgwm99cjdmuql1wfee",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 361,
+      "sample_id": "3p529iw9kyl1zm6eqvznqhkatruflj",
+      "source": "mctest",
+      "turns": 14
+    },
+    {
+      "index": 362,
+      "sample_id": "34x6j5flptysvl8n1qy4m1bww3kjqz",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 363,
+      "sample_id": "30bxrybrp4x1oc9jpzup2dd38bdhwb",
+      "source": "race",
+      "turns": 19
+    },
+    {
+      "index": 364,
+      "sample_id": "34z02eimisdylvztwmit917ni020tb",
+      "source": "race",
+      "turns": 21
+    },
+    {
+      "index": 365,
+      "sample_id": "31lvtdxbl7ay2cbnhqzh76ytw9drlm",
+      "source": "gutenberg",
+      "turns": 19
+    },
+    {
+      "index": 366,
+      "sample_id": "3z4airp3c6d591tvxfnqc9b3zpwx1v",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 367,
+      "sample_id": "3jw0ylfxrtgjl248kygp3gnqn7oww4",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 368,
+      "sample_id": "3l6l49wxw0xdzh64ernxiormi4u45r",
+      "source": "gutenberg",
+      "turns": 13
+    },
+    {
+      "index": 369,
+      "sample_id": "3ngi5arftt500sr4bod9iwp0yzip1d",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 370,
+      "sample_id": "317hq483i7sbxdbp3gln661reeqnio",
+      "source": "mctest",
+      "turns": 20
+    },
+    {
+      "index": 371,
+      "sample_id": "38jbbyetqoadv0zxpsg0mixzwcg4ea",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 372,
+      "sample_id": "32n49tqg3gi9z010tjf1zp7loe2ave",
+      "source": "gutenberg",
+      "turns": 12
+    },
+    {
+      "index": 373,
+      "sample_id": "3zwfc4w1uu7c2k1rvfwjctt90e7rf0",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 374,
+      "sample_id": "3b3wtrp3db2mxqttd3hq1pzqlss92f",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 375,
+      "sample_id": "3v5q80fxixr0io4dwuggacw4l99230",
+      "source": "race",
+      "turns": 14
+    },
+    {
+      "index": 376,
+      "sample_id": "3wminlgalb3d0rv022kw9xjw363caw",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 377,
+      "sample_id": "336kav9kyqs1yr11lf9606sht1ky2z",
+      "source": "mctest",
+      "turns": 18
+    },
+    {
+      "index": 378,
+      "sample_id": "3zazr5xv01ie1z38eu0vqqa5bfgcze",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 379,
+      "sample_id": "3fui0jhjpxyp360w0uultm1wrhc333",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 380,
+      "sample_id": "3qxnc7eipivf1gqfygdci16bnn390b",
+      "source": "race",
+      "turns": 16
+    },
+    {
+      "index": 381,
+      "sample_id": "3ix2egzr7bjs7mnne5n4rrl1tldrjs",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 382,
+      "sample_id": "3vben272mkzuhzxzlo26koyhmrksg9",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 383,
+      "sample_id": "3s4aw7t80bir169p6e34zdnj505l4k",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 384,
+      "sample_id": "3lj7ur74rhdhp6cairjjc5r8a2j4nx",
+      "source": "gutenberg",
+      "turns": 19
+    },
+    {
+      "index": 385,
+      "sample_id": "3zr9aiqjub9e4ak3hlhl1tvv13p40q",
+      "source": "mctest",
+      "turns": 19
+    },
+    {
+      "index": 386,
+      "sample_id": "36zn444ytrytfyb14vl0lv1w5ryio8",
+      "source": "wikipedia",
+      "turns": 16
+    },
+    {
+      "index": 387,
+      "sample_id": "3itxp059pwj481n0tun9h1qxf0ujsw",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 388,
+      "sample_id": "352ythgrovdpfaqzfto67lucoosh4f",
+      "source": "wikipedia",
+      "turns": 12
+    },
+    {
+      "index": 389,
+      "sample_id": "3tpzplc3m0cwav5jysrs6p4xwayp3p",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 390,
+      "sample_id": "3eret4btvm9he6xj29nu1llk20nk91",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 391,
+      "sample_id": "3fe2ercczx8lwky5hqbkus28qu3poe",
+      "source": "race",
+      "turns": 13
+    },
+    {
+      "index": 392,
+      "sample_id": "3h0w84iwbk2kw61v04cdub89nc4ere",
+      "source": "gutenberg",
+      "turns": 13
+    },
+    {
+      "index": 393,
+      "sample_id": "3jv9lgbjwtefj756e7lx0jogp3ygoj",
+      "source": "cnn",
+      "turns": 22
+    },
+    {
+      "index": 394,
+      "sample_id": "39rp059mehtvsncjl5e6748ef5kbm6",
+      "source": "wikipedia",
+      "turns": 15
+    },
+    {
+      "index": 395,
+      "sample_id": "3t3iwe1xg6nm9o4sdkc8o7y5v11qtu",
+      "source": "wikipedia",
+      "turns": 16
+    },
+    {
+      "index": 396,
+      "sample_id": "3bqu611vfpkxxaesycw5bc74qt7991",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 397,
+      "sample_id": "3qjoxow4xjrtzqo3vwgw8cezi0yem6",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 398,
+      "sample_id": "3ovhno1ve61o6r9meqv6awsnwn0dz3",
+      "source": "mctest",
+      "turns": 22
+    },
+    {
+      "index": 399,
+      "sample_id": "3rjsc4xj10uw0to3vq0v6l1927z50s",
+      "source": "gutenberg",
+      "turns": 12
+    },
+    {
+      "index": 400,
+      "sample_id": "37q970snze8xdk7w35h3d1ubl97s1u",
+      "source": "race",
+      "turns": 17
+    },
+    {
+      "index": 401,
+      "sample_id": "3qemnnsb2xz5mh3gvv3njczontvd7i",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 402,
+      "sample_id": "35dr22ar5dk1j47akj1902q0x2f3xk",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 403,
+      "sample_id": "3dr23u6we5exclen4th8uq9rbv9tea",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 404,
+      "sample_id": "3qfufysy9yf51eztk30640iz760f4t",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 405,
+      "sample_id": "3tu5zicbrd13b4c4am1dxb2ihy18qs",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 406,
+      "sample_id": "3w92k5rlwuhctupjynokrerzw095vb",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 407,
+      "sample_id": "3uwn2hhpuy50rrel8sf1a87eoh7snb",
+      "source": "gutenberg",
+      "turns": 13
+    },
+    {
+      "index": 408,
+      "sample_id": "3k3r2qnk8b3vh22vwnrw78ui4rxu9k",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 409,
+      "sample_id": "37td41k0ah9h0nhuj26nuxd2pc0scy",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 410,
+      "sample_id": "3nvc2eb65qzqj9xkpfnbjgx90ma3yk",
+      "source": "wikipedia",
+      "turns": 15
+    },
+    {
+      "index": 411,
+      "sample_id": "31lm9edvols7sovvly6ni7grs0hnjh",
+      "source": "cnn",
+      "turns": 14
+    },
+    {
+      "index": 412,
+      "sample_id": "39gxdjn2otevgc8lwlvn3y1qxc9v89",
+      "source": "race",
+      "turns": 15
+    },
+    {
+      "index": 413,
+      "sample_id": "3vhhr074h3hoktr88c1b2p7tv3cl7m",
+      "source": "mctest",
+      "turns": 15
+    },
+    {
+      "index": 414,
+      "sample_id": "3tdxmtx3cbu3qs5x4zz64vf5jpz6ix",
+      "source": "mctest",
+      "turns": 14
+    },
+    {
+      "index": 415,
+      "sample_id": "3zak8w07i4edl8eiwr83extp1kl0uq",
+      "source": "cnn",
+      "turns": 17
+    },
+    {
+      "index": 416,
+      "sample_id": "3tok3khvjtiwqeu5l4h3u6bnq8g7oo",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 417,
+      "sample_id": "3ias3u3i0fg5lj8qbnvmsvug8l72bf",
+      "source": "race",
+      "turns": 11
+    },
+    {
+      "index": 418,
+      "sample_id": "3dy46v3x3pivv0a4sw67ngx0iyn55r",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 419,
+      "sample_id": "320duz38g7m1iwe9yutssn7urlfgjg",
+      "source": "cnn",
+      "turns": 11
+    },
+    {
+      "index": 420,
+      "sample_id": "3owepkl089ce8tutkphqfhbi0ye7nc",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 421,
+      "sample_id": "3uouji6mtdeliyktz3xanbg0bugxuy",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 422,
+      "sample_id": "3k2755hg5s3i1aimde1z74c5kjodfz",
+      "source": "mctest",
+      "turns": 21
+    },
+    {
+      "index": 423,
+      "sample_id": "38bquhla9w0fbh1spajsdo8dm42mok",
+      "source": "wikipedia",
+      "turns": 13
+    },
+    {
+      "index": 424,
+      "sample_id": "37z929rlg98ym4j55o1dj7d6d02tso",
+      "source": "gutenberg",
+      "turns": 15
+    },
+    {
+      "index": 425,
+      "sample_id": "34v1s5k3gs1afrcu05ttr2g20qg690",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 426,
+      "sample_id": "3300dtyqt2hkk5mvnpndply4sz7qed",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 427,
+      "sample_id": "3p59jyt76lk5h527b9m7sp02etn2tn",
+      "source": "cnn",
+      "turns": 15
+    },
+    {
+      "index": 428,
+      "sample_id": "3zy8ke4isj31mg8hifcnppmqssxvq7",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 429,
+      "sample_id": "3vd82fohkqo22vp1clpeas31spqcoi",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 430,
+      "sample_id": "3kkg4cdwkiyw048ghh0eu4wo5d049w",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 431,
+      "sample_id": "33fbrbdw6ozzh32l540id6d1c6t8cp",
+      "source": "race",
+      "turns": 16
+    },
+    {
+      "index": 432,
+      "sample_id": "3of2m9aatgowkxfw67hte9ndh4tkz0",
+      "source": "race",
+      "turns": 11
+    },
+    {
+      "index": 433,
+      "sample_id": "3k9fobbf2hjdnejvoji0ymtjvcenlk",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 434,
+      "sample_id": "3iq1vmjrytkb2toxqia577iow9xa9l",
+      "source": "race",
+      "turns": 19
+    },
+    {
+      "index": 435,
+      "sample_id": "3xcc1odxdlb9t9r09v7dosxn7pdqr8",
+      "source": "cnn",
+      "turns": 18
+    },
+    {
+      "index": 436,
+      "sample_id": "3u088zljvktqdc3nrrn4wlemlv1w0f",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 437,
+      "sample_id": "3owepkl089ce8tutkphqfhbi136n7v",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 438,
+      "sample_id": "340ugxu9dy1te9fyzowszqjfvbsuvw",
+      "source": "race",
+      "turns": 19
+    },
+    {
+      "index": 439,
+      "sample_id": "3zazr5xv01ie1z38eu0vqqa5cmszcs",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 440,
+      "sample_id": "3pm8nzgv8ygtq5dciud5dajb83fxqm",
+      "source": "cnn",
+      "turns": 17
+    },
+    {
+      "index": 441,
+      "sample_id": "3z9wi9eozzoatcf20lbme2j8l1kkhs",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 442,
+      "sample_id": "3k9fobbf2hjdnejvoji0ymtjvifnlx",
+      "source": "mctest",
+      "turns": 17
+    },
+    {
+      "index": 443,
+      "sample_id": "3p4rdnwnd56fenk4oitvdzka5vfijb",
+      "source": "mctest",
+      "turns": 11
+    },
+    {
+      "index": 444,
+      "sample_id": "3s4aw7t80bir169p6e34zdnj529l4s",
+      "source": "cnn",
+      "turns": 16
+    },
+    {
+      "index": 445,
+      "sample_id": "35h6s234sa0re4aixfgcfmb0etc65m",
+      "source": "race",
+      "turns": 14
+    },
+    {
+      "index": 446,
+      "sample_id": "3ty7zaog5fkzic962d418akrzw40kg",
+      "source": "cnn",
+      "turns": 14
+    },
+    {
+      "index": 447,
+      "sample_id": "3amw0rghod23ezytgbb7f3230k7pn8",
+      "source": "race",
+      "turns": 12
+    },
+    {
+      "index": 448,
+      "sample_id": "382m9cohehfccytc4y7izmvtuh2euo",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 449,
+      "sample_id": "3x3or7wpzz0sk7wrihthgp3o6mcl81",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 450,
+      "sample_id": "3ve8ayvf8mx6kfmvw6qjlcy49ig8ft",
+      "source": "race",
+      "turns": 14
+    },
+    {
+      "index": 451,
+      "sample_id": "34s9dkfk73pxndqu7y7qsuvf5vcnyf",
+      "source": "race",
+      "turns": 10
+    },
+    {
+      "index": 452,
+      "sample_id": "39o5d9o87tsdg6wftn5mmp5qwmbc3f",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 453,
+      "sample_id": "3dy4fpooa1o1yhnhvu1nufwvn4srvc",
+      "source": "race",
+      "turns": 12
+    },
+    {
+      "index": 454,
+      "sample_id": "3ga6afukooo4xe7vffjnxg26ark3ha",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 455,
+      "sample_id": "3ctoc39k37qip3385rpymau1s9p7jf",
+      "source": "wikipedia",
+      "turns": 15
+    },
+    {
+      "index": 456,
+      "sample_id": "36tfcyns44agdce9z4qb4wrahjpxh2",
+      "source": "gutenberg",
+      "turns": 13
+    },
+    {
+      "index": 457,
+      "sample_id": "3h7z272lx77dqzv84yvs2byevxeplt",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 458,
+      "sample_id": "354p56de9k3bo6myslyceblonyl7sp",
+      "source": "mctest",
+      "turns": 12
+    },
+    {
+      "index": 459,
+      "sample_id": "3pq8k71nhxkp7cy2ioo532t837raa9",
+      "source": "race",
+      "turns": 17
+    },
+    {
+      "index": 460,
+      "sample_id": "3zgvpd4g6thvng5j0gvlf0a907yztf",
+      "source": "race",
+      "turns": 13
+    },
+    {
+      "index": 461,
+      "sample_id": "3irik4hm3akcdpjxcp3ktsha7he6cp",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 462,
+      "sample_id": "3cfvk00fwll5gtd3p2wjwb7x0sr6l7",
+      "source": "mctest",
+      "turns": 17
+    },
+    {
+      "index": 463,
+      "sample_id": "37m28k1j0qd08516cu1iw1wrtkcajw",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 464,
+      "sample_id": "3napmvf0zwfij750y6j6nt8kpxo72a",
+      "source": "gutenberg",
+      "turns": 14
+    },
+    {
+      "index": 465,
+      "sample_id": "3zpbjo59kp12f69s84pzapoi14bhdo",
+      "source": "cnn",
+      "turns": 14
+    },
+    {
+      "index": 466,
+      "sample_id": "3mx2nq3yc9u4xjuey2p2fzokc165xj",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 467,
+      "sample_id": "3di28l7yxaew312e2axyokqwkq31en",
+      "source": "gutenberg",
+      "turns": 14
+    },
+    {
+      "index": 468,
+      "sample_id": "3tem0pf1q5xr463wawie4xp1e8y0dz",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 469,
+      "sample_id": "3yw4xosqkqldsxz0sac3s2cz64l1u8",
+      "source": "wikipedia",
+      "turns": 12
+    },
+    {
+      "index": 470,
+      "sample_id": "3vfjci1k4zzigkxm6z21uetl12ogrn",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 471,
+      "sample_id": "3b4yi393v9wx746qgown92hkbf4ssa",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 472,
+      "sample_id": "3kakfy4pgu24t9iflx18xs3la3j3il",
+      "source": "wikipedia",
+      "turns": 12
+    },
+    {
+      "index": 473,
+      "sample_id": "3nd9uoo81k23a8s9gk9nu56apvfwlw",
+      "source": "cnn",
+      "turns": 17
+    },
+    {
+      "index": 474,
+      "sample_id": "3s3amizx3u5byyycmcbyzyr2o92dc1",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 475,
+      "sample_id": "3ias3u3i0fg5lj8qbnvmsvug90g2bj",
+      "source": "cnn",
+      "turns": 15
+    },
+    {
+      "index": 476,
+      "sample_id": "31n2ww6r9rqkjigpkpvnuvqttx8f3u",
+      "source": "cnn",
+      "turns": 14
+    },
+    {
+      "index": 477,
+      "sample_id": "3pmby0ye273zv8lvaw6wd28cwkj9c3",
+      "source": "mctest",
+      "turns": 19
+    },
+    {
+      "index": 478,
+      "sample_id": "3q5zz9zevofeiit6qudaz07rl34584",
+      "source": "wikipedia",
+      "turns": 17
+    },
+    {
+      "index": 479,
+      "sample_id": "3dip6yhapcsee1mz1v6d3ud4yrg8eb",
+      "source": "cnn",
+      "turns": 13
+    },
+    {
+      "index": 480,
+      "sample_id": "31lm9edvols7sovvly6ni7grs05nj5",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 481,
+      "sample_id": "3hya4d452rjvy0k6gphibll1osu2fb",
+      "source": "cnn",
+      "turns": 15
+    },
+    {
+      "index": 482,
+      "sample_id": "3jpsl1dz5szwrvsrrstap8d82ayant",
+      "source": "wikipedia",
+      "turns": 13
+    },
+    {
+      "index": 483,
+      "sample_id": "3m0bcwmb8vwrxz6xp7ktg2a5d8ebwf",
+      "source": "race",
+      "turns": 11
+    },
+    {
+      "index": 484,
+      "sample_id": "32zkvd547fnu6149fn9rb5z8f81b3c",
+      "source": "cnn",
+      "turns": 15
+    },
+    {
+      "index": 485,
+      "sample_id": "3c2nj6jbkah7msxned0vjquaqmkn2d",
+      "source": "cnn",
+      "turns": 20
+    },
+    {
+      "index": 486,
+      "sample_id": "30x31n5d63qt78kwzoawo2nep6sasl",
+      "source": "cnn",
+      "turns": 11
+    },
+    {
+      "index": 487,
+      "sample_id": "3x87c8jfv6bluordok7ie22jshoqs3",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 488,
+      "sample_id": "3u84xhcdicdb6vqtlfud7syhj444z2",
+      "source": "wikipedia",
+      "turns": 11
+    },
+    {
+      "index": 489,
+      "sample_id": "3ns0a6kxc48ribjdggweghvk99agzy",
+      "source": "gutenberg",
+      "turns": 10
+    },
+    {
+      "index": 490,
+      "sample_id": "3auqqel7u5tdyn3i1hi8ajv8ef30vz",
+      "source": "race",
+      "turns": 20
+    },
+    {
+      "index": 491,
+      "sample_id": "31lm9edvols7sovvly6ni7grsxbjn1",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 492,
+      "sample_id": "3atthhxxwaog97pt5m8w48spgtuixz",
+      "source": "mctest",
+      "turns": 15
+    },
+    {
+      "index": 493,
+      "sample_id": "3l0kt67y8egu3qizfuocro5lsu0syc",
+      "source": "race",
+      "turns": 12
+    },
+    {
+      "index": 494,
+      "sample_id": "3myyfcxhj37bfevovn6omlib9o54gt",
+      "source": "gutenberg",
+      "turns": 20
+    },
+    {
+      "index": 495,
+      "sample_id": "3npfyt4izc42dgjyfy8tjwf92engxn",
+      "source": "race",
+      "turns": 21
+    },
+    {
+      "index": 496,
+      "sample_id": "3a7y0r2p2ooc4i9zn4twg97pt7fjx6",
+      "source": "mctest",
+      "turns": 10
+    },
+    {
+      "index": 497,
+      "sample_id": "3o7l7bfshep737ycahi4gj7i1qleiv",
+      "source": "wikipedia",
+      "turns": 20
+    },
+    {
+      "index": 498,
+      "sample_id": "3i02618ya06g9pi2dcnttyux9nopu3",
+      "source": "race",
+      "turns": 19
+    },
+    {
+      "index": 499,
+      "sample_id": "3ixqg4fa2tygl3tpwwa12i2uf58b90",
+      "source": "wikipedia",
+      "turns": 12
+    }
+  ],
+  "prompt": {
+    "template": "historical scoring.coqa.doc_to_text",
+    "add_special_tokens": true,
+    "truncation": false
+  },
+  "expected_files": {
+    "benchmarks/coqa_docs.json": {
+      "size": 5863002,
+      "sha256": "f2e8cff78159f98eef5708c0b09243b35120c0463483ffd557abe4a452c8653c"
+    },
+    "benchmarks/coqa_fixed500_prompts.jsonl": {
+      "size": 1853874,
+      "sha256": "9a04827b86633cb59f7ec6e4a30ed22b52e67073c5afd08179f4e0a294112093"
+    },
+    "benchmarks/coqa_fixed500_references.jsonl": {
+      "size": 59729,
+      "sha256": "e33bffec3cdde5dcf2d0dfee44befa3d8ad8973e6241efe4e58fc70e23cf4a3f"
+    },
+    "benchmarks/speed_prompts.jsonl": {
+      "size": 1853874,
+      "sha256": "9a04827b86633cb59f7ec6e4a30ed22b52e67073c5afd08179f4e0a294112093"
+    }
+  }
+}

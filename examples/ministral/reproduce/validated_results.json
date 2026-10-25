@@ -1,0 +1,184 @@
+{
+  "status": "previous_public_evaluation_reused",
+  "public_commit": "4b9ef60e818a67a74a4ef0e866540726c0f9a8ba",
+  "accuracy": {
+    "n": 500,
+    "f1": 0.7869529911382923,
+    "em": 0.6241666666666668,
+    "prompts_sha256": "9a04827b86633cb59f7ec6e4a30ed22b52e67073c5afd08179f4e0a294112093",
+    "coqa_docs_sha256": "f2e8cff78159f98eef5708c0b09243b35120c0463483ffd557abe4a452c8653c",
+    "scorer_sha256": "62ac82e8027162d134709355a00526ff5497deb5987beebb18b439b320e860ca",
+    "new_wrapper_full500_rerun": false
+  },
+  "prior_public_speed": {
+    "ms_per_token": 110.22573017322834,
+    "tokens_per_s": 9.072291908871204
+  },
+  "historical_progressive": {
+    "f1": 0.7843212061748897,
+    "em": 0.6231666666666666
+  },
+  "optional_validation": {
+    "status": "PASS_LOCAL_ARTIFACTS_UNPUBLISHED",
+    "new_full500_generation": false,
+    "accuracy_dry_samples": 5,
+    "generic_tests": 7,
+    "optional_tests": 10,
+    "matched_speed": [
+      {
+        "method": "block",
+        "decode_tokens": 230,
+        "total_decode_ms": 81241.168795,
+        "ms_per_token": 353.2224730217392,
+        "tokens_per_s": 2.831076945487709,
+        "directions": [
+          {
+            "status": "PASS",
+            "method": "block",
+            "direction": "forward",
+            "decode_tokens": 115,
+            "total_decode_ms": 40574.07130799999,
+            "ms_per_token": 352.81801137391295,
+            "tokens_per_s": 2.834322420518974,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              0,
+              2,
+              5,
+              6,
+              7,
+              8,
+              9,
+              11
+            ]
+          },
+          {
+            "status": "PASS",
+            "method": "block",
+            "direction": "reverse",
+            "decode_tokens": 115,
+            "total_decode_ms": 40667.097487000014,
+            "ms_per_token": 353.62693466956534,
+            "tokens_per_s": 2.82783889449602,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              11,
+              9,
+              8,
+              7,
+              6,
+              5,
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "method": "one-shot",
+        "decode_tokens": 226,
+        "total_decode_ms": 68878.77647199998,
+        "ms_per_token": 304.77334722123885,
+        "tokens_per_s": 3.28112680822476,
+        "directions": [
+          {
+            "status": "PASS",
+            "method": "one-shot",
+            "direction": "forward",
+            "decode_tokens": 113,
+            "total_decode_ms": 34430.937482999994,
+            "ms_per_token": 304.6985617964601,
+            "tokens_per_s": 3.2819321302474807,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              0,
+              2,
+              5,
+              6,
+              7,
+              8,
+              9,
+              11
+            ]
+          },
+          {
+            "status": "PASS",
+            "method": "one-shot",
+            "direction": "reverse",
+            "decode_tokens": 113,
+            "total_decode_ms": 34447.83898899999,
+            "ms_per_token": 304.8481326460176,
+            "tokens_per_s": 3.280321881325664,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              11,
+              9,
+              8,
+              7,
+              6,
+              5,
+              2,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "method": "leanstream",
+        "decode_tokens": 256,
+        "total_decode_ms": 28837.268936,
+        "ms_per_token": 112.64558178125,
+        "tokens_per_s": 8.87740099688891,
+        "directions": [
+          {
+            "status": "PASS",
+            "method": "leanstream",
+            "direction": "forward",
+            "decode_tokens": 128,
+            "total_decode_ms": 14595.978703999994,
+            "ms_per_token": 114.03108362499995,
+            "tokens_per_s": 8.769538692525078,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              0,
+              2,
+              5,
+              6,
+              7,
+              8,
+              9,
+              11
+            ]
+          },
+          {
+            "status": "PASS",
+            "method": "leanstream",
+            "direction": "reverse",
+            "decode_tokens": 128,
+            "total_decode_ms": 14241.290232000007,
+            "ms_per_token": 111.26007993750005,
+            "tokens_per_s": 8.987949681159193,
+            "sanity": false,
+            "protocol": "forward/reverse independent processes, one warmup, EOS stop, up to16 decode calls, timer through logits.item",
+            "indices": [
+              11,
+              9,
+              8,
+              7,
+              6,
+              5,
+              2,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "artifact_notice_added_after_measurement": "Apache-2.0 text only; original payload unchanged"
+  }
+}

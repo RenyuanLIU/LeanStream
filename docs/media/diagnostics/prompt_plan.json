@@ -1,0 +1,9 @@
+{
+  "selection_rule": "Run both predeclared grounded question-answer prompts for all three methods. Use the first in this order only if all three answers are readable; retain every trace and disclose any systematic repetition. These short grounded tasks probe the CoQA-oriented use case, not general instruction quality.",
+  "order": [
+    "garden",
+    "library"
+  ],
+  "max_new_tokens": 64,
+  "default_prompt_retained": true
+}

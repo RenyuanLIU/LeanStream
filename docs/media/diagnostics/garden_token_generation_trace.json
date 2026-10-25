@@ -1,0 +1,980 @@
+{
+  "format_version": 1,
+  "kind": "real_token_completion_trace",
+  "model": "Ministral-3 8B",
+  "device": "Jetson AGX Orin",
+  "prompt": {
+    "prompt_text": "Read the story and answer the question using only the story.\n\nStory: Maya planted carrots and beans in her garden. Every morning she watered the plants before school. On Saturday, she picked the ripe carrots and made soup for her family.\n\nQuestion: What did Maya do with the carrots she picked?\nAnswer:",
+    "prompt_input_ids": [
+      1,
+      10311,
+      1278,
+      8303,
+      1321,
+      4832,
+      1278,
+      4098,
+      2505,
+      2342,
+      1278,
+      8303,
+      1338,
+      57415,
+      1058,
+      52206,
+      54952,
+      42675,
+      2392,
+      1321,
+      52571,
+      1294,
+      1853,
+      26428,
+      1046,
+      14632,
+      11828,
+      2165,
+      4180,
+      1286,
+      1278,
+      12474,
+      3066,
+      5090,
+      1046,
+      3249,
+      25873,
+      1044,
+      2165,
+      20431,
+      1278,
+      127641,
+      42675,
+      2392,
+      1321,
+      3214,
+      32998,
+      1394,
+      1853,
+      5135,
+      1338,
+      25229,
+      1058,
+      5675,
+      2697,
+      52206,
+      1653,
+      1454,
+      1278,
+      42675,
+      2392,
+      2165,
+      20431,
+      9551,
+      31106,
+      1058
+    ],
+    "tokenization": "raw author-written English prompt; pinned tokenizer with BOS, no chat template"
+  },
+  "independent_runs": true,
+  "run_order": [
+    "block",
+    "one-shot",
+    "leanstream"
+  ],
+  "timing": "monotonic perf_counter_ns elapsed from decode start through existing logits.argmax().item(); prefill and final drain excluded; no extra per-token GPU synchronization",
+  "presentation_only": true,
+  "records": [
+    {
+      "method": "block",
+      "prompt_input_ids_sha256": "7712d76477577552f9cd5995bb35216e71f8992ee74758593b277ea533614d33",
+      "decoded_prefixes_sha256": "662929e098c771ba91a7611f92ebdb600d7f44da0c2f6494f5fee86037617ab2",
+      "prefill_token_id": 3264,
+      "generated_token_ids": [
+        3214,
+        32998,
+        1046,
+        2
+      ],
+      "token_completion_ms": [
+        352.827849,
+        695.747863,
+        1047.088685,
+        1392.645753
+      ],
+      "decoded_prefixes": [
+        " She",
+        " She made",
+        " She made soup",
+        " She made soup.",
+        " She made soup."
+      ],
+      "eos": true,
+      "max_new_tokens": 64,
+      "prefill_ms": 2035.905315,
+      "decode_wall_ms": 1392.652313,
+      "final_drain_ms": 0.011904,
+      "model_repository": "cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit",
+      "model_revision": "e3a799844ba08f27fddbf118e154057eb0105889",
+      "tokenizer_sha256": "b8e02db616fe020ed1bd7a9a8eb4db73a9693012909c75f9ba2c6f8abd26fadb",
+      "model_config_sha256": "802ffb270ec4e98648f447d701213bf4bff5f5928943f4129eb3a2bc609efbaa",
+      "packed_manifest_sha256": "2a386a8a76b4fed1fb51b4b9af43a24daa083c00ecc72730b862d4252ed7d2e9",
+      "predictor_capture_sha256": "337cd85a169768782d23c9f40b91ae1a2e4f88763add367cfe93857a1e8399e5",
+      "public_source_base": "8d0e24bce1189c2cc95da170c118acac982c4da5",
+      "runtime_module_origins": {
+        "backends.triton": "backends/triton/__init__.py",
+        "backends.triton.core": "backends/triton/core.py",
+        "backends.triton.mapped": "backends/triton/mapped.py",
+        "backends.triton.primitives": "backends/triton/primitives.py",
+        "baselines.block": "examples/ministral/reproduce/baselines/block.py",
+        "baselines.fixed_cache": "examples/ministral/reproduce/baselines/fixed_cache.py",
+        "baselines.one_shot": "examples/ministral/reproduce/baselines/one_shot.py",
+        "python.attention_decode_kernels": "examples/ministral/python/attention_decode_kernels.py",
+        "python.attention_refine": "examples/ministral/python/attention_refine.py",
+        "python.ministral3_text_loader": "examples/ministral/python/ministral3_text_loader.py",
+        "python.predictor_cpu_native": "examples/ministral/python/predictor_cpu_native.py",
+        "scripts.triton_split_probe": "examples/ministral/scripts/triton_split_probe.py"
+      },
+      "native_library_sha256": {
+        "libtriton_mapped.so": "6db54dfc08db76ef6e9031d8f6713070afcb49c9b74f88cdb6643c444917b890",
+        "libfixed_cache.so": "92820e99f0856bf8d706a9052d319d8551c0d9e7fe1194be5ddc7272b95e45dd"
+      },
+      "hardware": {
+        "machine": "aarch64",
+        "cuda": {
+          "name": "Orin",
+          "capability": [
+            8,
+            7
+          ],
+          "total_memory_bytes": 32019165184
+        }
+      },
+      "software": {
+        "torch": "2.1.0a0+41361538.nv23.6",
+        "triton": "3.1.0",
+        "transformers": "4.41.1",
+        "numpy": "1.24.4",
+        "safetensors": "0.4.2",
+        "tokenizers": "0.19.1",
+        "huggingface-hub": "0.23.1"
+      },
+      "configuration": {
+        "greedy": true,
+        "seed": 42,
+        "eos_id": 2,
+        "QD": 24,
+        "attention": "unsplit Direct-GQA",
+        "cache_policy": "immutable fixed-hot",
+        "native_pre_enqueue": false,
+        "B_CTAs": null,
+        "warps_per_CTA": 4
+      },
+      "io": {
+        "fixed_hot_immutable": true,
+        "selected_neurons": 2867,
+        "resident_neurons": 2437,
+        "physical_bytes_read": 1638912000
+      }
+    },
+    {
+      "method": "one-shot",
+      "prompt_input_ids_sha256": "7712d76477577552f9cd5995bb35216e71f8992ee74758593b277ea533614d33",
+      "decoded_prefixes_sha256": "289e907b3dc7a68a88b3ecfcf5f26ac175e2e00d574b9da93f9d870aa07c0cc5",
+      "prefill_token_id": 3264,
+      "generated_token_ids": [
+        2
+      ],
+      "token_completion_ms": [
+        307.149088
+      ],
+      "decoded_prefixes": [
+        " She",
+        " She"
+      ],
+      "eos": true,
+      "max_new_tokens": 64,
+      "prefill_ms": 2050.226422,
+      "decode_wall_ms": 307.154912,
+      "final_drain_ms": 0.009217,
+      "model_repository": "cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit",
+      "model_revision": "e3a799844ba08f27fddbf118e154057eb0105889",
+      "tokenizer_sha256": "b8e02db616fe020ed1bd7a9a8eb4db73a9693012909c75f9ba2c6f8abd26fadb",
+      "model_config_sha256": "802ffb270ec4e98648f447d701213bf4bff5f5928943f4129eb3a2bc609efbaa",
+      "packed_manifest_sha256": "2a386a8a76b4fed1fb51b4b9af43a24daa083c00ecc72730b862d4252ed7d2e9",
+      "predictor_capture_sha256": "337cd85a169768782d23c9f40b91ae1a2e4f88763add367cfe93857a1e8399e5",
+      "public_source_base": "8d0e24bce1189c2cc95da170c118acac982c4da5",
+      "runtime_module_origins": {
+        "backends.triton": "backends/triton/__init__.py",
+        "backends.triton.core": "backends/triton/core.py",
+        "backends.triton.mapped": "backends/triton/mapped.py",
+        "backends.triton.primitives": "backends/triton/primitives.py",
+        "baselines.block": "examples/ministral/reproduce/baselines/block.py",
+        "baselines.fixed_cache": "examples/ministral/reproduce/baselines/fixed_cache.py",
+        "baselines.one_shot": "examples/ministral/reproduce/baselines/one_shot.py",
+        "python.attention_decode_kernels": "examples/ministral/python/attention_decode_kernels.py",
+        "python.attention_refine": "examples/ministral/python/attention_refine.py",
+        "python.ministral3_text_loader": "examples/ministral/python/ministral3_text_loader.py",
+        "python.predictor_cpu_native": "examples/ministral/python/predictor_cpu_native.py",
+        "scripts.triton_split_probe": "examples/ministral/scripts/triton_split_probe.py"
+      },
+      "native_library_sha256": {
+        "libtriton_mapped.so": "6db54dfc08db76ef6e9031d8f6713070afcb49c9b74f88cdb6643c444917b890",
+        "libfixed_cache.so": "92820e99f0856bf8d706a9052d319d8551c0d9e7fe1194be5ddc7272b95e45dd"
+      },
+      "hardware": {
+        "machine": "aarch64",
+        "cuda": {
+          "name": "Orin",
+          "capability": [
+            8,
+            7
+          ],
+          "total_memory_bytes": 32019165184
+        }
+      },
+      "software": {
+        "torch": "2.1.0a0+41361538.nv23.6",
+        "triton": "3.1.0",
+        "transformers": "4.41.1",
+        "numpy": "1.24.4",
+        "safetensors": "0.4.2",
+        "tokenizers": "0.19.1",
+        "huggingface-hub": "0.23.1"
+      },
+      "configuration": {
+        "greedy": true,
+        "seed": 42,
+        "eos_id": 2,
+        "QD": 24,
+        "attention": "unsplit Direct-GQA",
+        "cache_policy": "immutable fixed-hot",
+        "native_pre_enqueue": false,
+        "B_CTAs": null,
+        "warps_per_CTA": 4
+      },
+      "io": {
+        "fixed_hot_immutable": true,
+        "selected_neurons": 2867,
+        "resident_neurons": 2437,
+        "physical_bytes_read": 407021568
+      }
+    },
+    {
+      "method": "leanstream",
+      "prompt_input_ids_sha256": "7712d76477577552f9cd5995bb35216e71f8992ee74758593b277ea533614d33",
+      "decoded_prefixes_sha256": "662929e098c771ba91a7611f92ebdb600d7f44da0c2f6494f5fee86037617ab2",
+      "prefill_token_id": 3264,
+      "generated_token_ids": [
+        3214,
+        32998,
+        1046,
+        2
+      ],
+      "token_completion_ms": [
+        116.456947,
+        214.585802,
+        312.994661,
+        424.080856
+      ],
+      "decoded_prefixes": [
+        " She",
+        " She made",
+        " She made soup",
+        " She made soup.",
+        " She made soup."
+      ],
+      "eos": true,
+      "max_new_tokens": 64,
+      "prefill_ms": 2287.421152,
+      "decode_wall_ms": 424.093368,
+      "final_drain_ms": 18.85917,
+      "model_repository": "cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit",
+      "model_revision": "e3a799844ba08f27fddbf118e154057eb0105889",
+      "tokenizer_sha256": "b8e02db616fe020ed1bd7a9a8eb4db73a9693012909c75f9ba2c6f8abd26fadb",
+      "model_config_sha256": "802ffb270ec4e98648f447d701213bf4bff5f5928943f4129eb3a2bc609efbaa",
+      "packed_manifest_sha256": "2a386a8a76b4fed1fb51b4b9af43a24daa083c00ecc72730b862d4252ed7d2e9",
+      "predictor_capture_sha256": "337cd85a169768782d23c9f40b91ae1a2e4f88763add367cfe93857a1e8399e5",
+      "public_source_base": "8d0e24bce1189c2cc95da170c118acac982c4da5",
+      "runtime_module_origins": {
+        "backends.triton": "backends/triton/__init__.py",
+        "backends.triton.binding": "backends/triton/binding.py",
+        "backends.triton.core": "backends/triton/core.py",
+        "backends.triton.mapped": "backends/triton/mapped.py",
+        "backends.triton.persistent": "backends/triton/persistent.py",
+        "backends.triton.primitives": "backends/triton/primitives.py",
+        "backends.triton.reduction": "backends/triton/reduction.py",
+        "pack.int4_format": "examples/ministral/pack/int4_format.py",
+        "python.attention_decode_kernels": "examples/ministral/python/attention_decode_kernels.py",
+        "python.attention_refine": "examples/ministral/python/attention_refine.py",
+        "python.g2_w4a8_runtime": "examples/ministral/python/g2_w4a8_runtime.py",
+        "python.leanstream_cuda_backend": "examples/ministral/python/leanstream_cuda_backend.py",
+        "python.ministral3_text_loader": "examples/ministral/python/ministral3_text_loader.py",
+        "python.predictor_cpu_native": "examples/ministral/python/predictor_cpu_native.py",
+        "python.split_async": "examples/ministral/python/split_async.py",
+        "python.storage": "examples/ministral/python/storage.py",
+        "python.triton_runtime_kernels": "examples/ministral/python/triton_runtime_kernels.py",
+        "python.triton_split_mlp": "examples/ministral/python/triton_split_mlp.py",
+        "python.triton_split_runtime": "examples/ministral/python/triton_split_runtime.py",
+        "python.two_stage_mapped": "examples/ministral/python/two_stage_mapped.py",
+        "python.v1_storage": "examples/ministral/python/v1_storage.py",
+        "scripts.predictor_shared_input": "examples/ministral/scripts/predictor_shared_input.py",
+        "scripts.triton_split_probe": "examples/ministral/scripts/triton_split_probe.py"
+      },
+      "native_library_sha256": {
+        "libtriton_mapped.so": "6db54dfc08db76ef6e9031d8f6713070afcb49c9b74f88cdb6643c444917b890",
+        "libmapped.so": "b59d4a0bd106fc369ab5c1a4748c16757731407d46d4529e814f845fbc15194b",
+        "libpredictor.so": "4d430e945fb177e9ad838e6a802b2d978d5d15940e9ada135129b89490c86cf7"
+      },
+      "hardware": {
+        "machine": "aarch64",
+        "cuda": {
+          "name": "Orin",
+          "capability": [
+            8,
+            7
+          ],
+          "total_memory_bytes": 32019165184
+        }
+      },
+      "software": {
+        "torch": "2.1.0a0+41361538.nv23.6",
+        "triton": "3.1.0",
+        "transformers": "4.41.1",
+        "numpy": "1.24.4",
+        "safetensors": "0.4.2",
+        "tokenizers": "0.19.1",
+        "huggingface-hub": "0.23.1"
+      },
+      "configuration": {
+        "greedy": true,
+        "seed": 42,
+        "eos_id": 2,
+        "QD": 24,
+        "attention": "unsplit Direct-GQA",
+        "cache_policy": "REPAIRED_KNEE",
+        "native_pre_enqueue": true,
+        "B_CTAs": 32,
+        "warps_per_CTA": 4
+      },
+      "io": {
+        "policy": "REPAIRED_KNEE",
+        "active_groups": 1434,
+        "keep_groups": 1219
+      },
+      "native_geometry": [
+        {
+          "layer": 0,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 0,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 0,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 1,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 1,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 1,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 2,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 2,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 2,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 3,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 3,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 3,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 4,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 4,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 4,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 5,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 5,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 5,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 6,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 6,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 6,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 7,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 7,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 7,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 8,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 8,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 8,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 9,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 9,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 9,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 10,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 10,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 10,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 11,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 11,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 11,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 12,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 12,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 12,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 13,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 13,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 13,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 14,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 14,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 14,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 15,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 15,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 15,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 16,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 16,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 16,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 17,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 17,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 17,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 18,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 18,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 18,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 19,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 19,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 19,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 20,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 20,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 20,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 21,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 21,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 21,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 22,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 22,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 22,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 23,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 23,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 23,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 24,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 24,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 24,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 25,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 25,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 25,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 26,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 26,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 26,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 27,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 27,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 27,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 28,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 28,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 28,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 29,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 29,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 29,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 30,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 30,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 30,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 31,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 31,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 31,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 32,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 32,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 32,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        },
+        {
+          "layer": 33,
+          "stage": 0,
+          "grid": 610,
+          "warps": 4
+        },
+        {
+          "layer": 33,
+          "stage": 1,
+          "grid": 32,
+          "warps": 4
+        },
+        {
+          "layer": 33,
+          "stage": 2,
+          "grid": 128,
+          "warps": 4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Read the story and answer the question using only the story.
+
+Story: Leo borrowed a book about planets from the town library. He read it with his sister on Sunday. On Monday, he returned the book and borrowed one about birds.
+
+Question: What was the second book about?
+Answer:

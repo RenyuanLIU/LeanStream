@@ -1,68 +1,25 @@
-# Optional Ministral-3 8B production integration
+# Optional Ministral-3 8B reproduction
 
-This example contains the model-specific loader, unsplit attention, P0/P1/P2 orchestration, REPAIRED_KNEE policy, and original cache-retention glue. All runtime and GPU implementation source comes from this repository. The native adapter uses `Runtime` / `WeightManager` and `backends/triton/enqueue.cpp`; A/B/compact reduction import the public `backends.triton` kernels. No private repository, binary, benchmark log, or source history is required.
+The [complete reproduction guide](../../docs/reproduce_ministral3_8b.md) is the recommended download → verify → build → run workflow. It covers the pinned upstream model, exact precomputed Group2 weights and calibrated predictors, original Block/One-shot baselines, Progressive inference, matched throughput, fixed-500 scoring and real-token replay.
 
-The generic toolkit is independent of this model policy. This optional recipe supports the validated Group2 REPAIRED_KNEE configuration, default input/output attention, and native Progressive enqueue. Other historical model-policy experiments are not supported here. It does not expose attention checkpoints as a default inference feature.
+**Artifact availability:** no public asset Release is available yet. Default public downloads stop with UNPUBLISHED. No private source or unpublished executable is required; model/experiment data still require their approved distribution route. CoQA contents are obtained under their original terms and reconstructed locally to exact historical hashes.
 
-## Dependencies
+The supported checkpoint is `cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit`, pinned revision `e3a799844ba08f27fddbf118e154057eb0105889`. The validated environment is Jetson AGX Orin SM87, CUDA11.8, vendor PyTorch2.1.0a0, Triton3.1.0, Transformers4.41.1, NumPy1.24.4 and safetensors0.4.2. See [dependencies](../../docs/dependencies.md).
 
-See [dependencies](../../docs/dependencies.md). The tested Jetson environment is CUDA 11.8, vendor PyTorch 2.1.0a0, upstream Triton 3.1.0, Transformers 4.41.1, NumPy 1.24.4, and safetensors 0.4.2. Use a supported environment; the build does not install or alter system packages.
+This application consumes the existing public Runtime/WeightManager, STREAM_IO, CPU predictor and production Triton/native enqueue. Model loading, unsplit Direct-GQA, P0/P1-lite/P2 orchestration, REPAIRED_KNEE, cache retention and kernel math remain unchanged. It is not a replacement for the general toolkit or its separate optional PyTorch integration.
 
-## External input artifacts
-
-Provide artifacts for the same checkpoint and calibration. They are data inputs, not hidden runtime source dependencies:
-
-- Model directory: the supported Ministral-3 8B compressed-tensors INT4 checkpoint (`config.json`, safetensors index/shards, tokenizer files). Respect its separate model license. The validated checkpoint identity is `cyankiwi/Ministral-3-8B-Instruct-2512-AWQ-4bit`, revision `e3a799844ba08f27fddbf118e154057eb0105889`. Other quantized layouts are not interchangeable.
-- YaRN metadata JSON: `rope_parameters` matching the checkpoint text configuration, `inv_freq` containing the authoritative inverse frequencies, and `factor` containing its attention scaling factor. Obtain these from the matching upstream model configuration/implementation; do not approximate its attention math.
-- Full predictor root: `layer_00/d1664/` through `layer_33/d1664/`, each containing calibrated `runtime.npz`, `w4.bin`, `scales4.bin`, `manifest.json`, `speculative_hot.npy`, and `speculative_hot.json`. The NPZ contains `groups` (7168 x 2) and selected `features`; the native stride is 1664. The manifests bind source/checkpoint identity, hashes, and layer. W4 weights and FP32 scales follow the public predictor contract. Learned/calibrated artifacts are intentionally not bundled or retrained by this recipe.
-- Compact P1 root: `layer_XX/d512/{runtime.npz,w4.bin,scales4.bin,manifest.json}` matching the full predictor identity. It supplies the original 512-feature / 128-group speculative stage. P0 budget is 32; full P2 scoring is unchanged.
-- Packed weights root: `g2_weights/layer_XX/{qweights.bin,scales.bin,metadata.json}` and `g2_weights/manifest.json`. Logical/physical ordering must match each predictor's `groups`. The reader validates shape, permutation, format, and artifact identities.
-- Prompts: JSONL records with `sample_id` and `input_ids`. Supply token IDs from the matching tokenizer and prompt formatting. One record suffices with `--indices 0`. No dataset is bundled or downloaded.
-
-All required runtime source is included. Creating new learned predictor/calibration data is outside this inference release; compatible existing artifacts or a replacement predictor are required. The example fails on incompatible geometry or identities rather than silently substituting a model or predictor.
-
-## Preparing packed weights
-
-Use already validated artifacts when reproducing a run. For new assets, the offline helpers reuse the included checkpoint dequantizer and the original INT4 packer:
+After downloading/verifying the inputs in the guide:
 
 ```sh
-python3 examples/ministral/export_mlp.py --model /path/to/model --rope /path/to/rope.json --output /path/to/canonical
-python3 examples/ministral/prepare_weights.py --canonical /path/to/canonical --predictors /path/to/full-predictors --output /path/to/weights/g2_weights
+python3 scripts/build_ministral.py --output /data/leanstream-build --arch sm_87
+python3 -m examples.ministral.reproduce.build_baselines --output /data/leanstream-build
+python3 -m examples.ministral.reproduce.smoke \
+  --assets /data/leanstream-assets --model /data/ministral-model --build /data/leanstream-build \
+  --numerical --output /data/results/numerical
 ```
 
-Canonical `layer_XX.npz` arrays are FP16 `gate[I,H]`, `up[I,H]`, and `down[H,I]`. Packing uses the predictor's unchanged Group2 ordering and the existing signed INT4/per-128 quantization. Export requires sufficient host memory and disk space. These commands create new output directories and do not alter the checkpoint or predictor inputs. They do not train predictors or determine group order.
+Use `smoke --method block` or `--method one-shot` for the original bounded baseline checks; omit `--numerical` for short normal Progressive decode. Production B is32persistent CTAs with four warps/CTA; the synthetic example LUT is never loaded.
 
-## Build
+Existing `run.py`, `numerical.py`, `python/`, `native/` and `scripts/` remain available unchanged. Developer export/packing helpers remain in the tree for new research artifacts, but reproducing the supported experiment must use the exact validated downloadable binaries. It does not require training, calibration, quantization, reordering, packing or fixed-hot generation.
 
-Run from the project root:
-
-```sh
-python3 scripts/build_ministral.py --output /path/to/build-ministral --arch sm_87
-export LEANSTREAM_MAPPED_LIBRARY=/path/to/build-ministral/libtriton_mapped.so
-```
-
-This builds the public runtime/I/O sources, production native enqueue, model-policy adapter, mapped-buffer helper, and reference CPU predictor. It does not borrow prebuilt LeanStream libraries. A different predictor may replace `libpredictor.so` if it implements the same ABI and artifact semantics.
-
-## Short decode
-
-```sh
-python3 examples/ministral/run.py \
-  --model /path/to/model --rope /path/to/rope.json \
-  --weights /path/to/weights --predictor-root /path/to/full-predictors \
-  --p1-lite-root /path/to/compact-predictors \
-  --predictor-library /path/to/build-ministral/libpredictor.so \
-  --shared /path/to/build-ministral/libmapped.so \
-  --prompts /path/to/prompts.jsonl --indices 0 \
-  --warmup-prompts 1 --max-decode-tokens 16 --no-layer-events \
-  --output /path/to/new-decode-output
-```
-
-The runner selects Progressive, QD24, REPAIRED_KNEE, ordinary unsplit DirectGQA, 32 persistent B CTAs, and four warps per CTA. It warms one prompt and cold-binds compiled kernels before measured decode, preserving the validated pre-enqueue boundary. A grid is 610 and reduction grid is 128 for this model. Output includes native launch metadata. Optional `--accuracy-records` compares a few saved prefixes; it is not required for inference, builds, or normal smoke checks.
-
-The timer brackets each ordinary model decode through greedy logits `.item()`. Prefill, reset, and final prompt drain are outside per-token timing. The existing EOS rule is preserved. No extra per-token synchronization, kernel profiling, or tuning is enabled. Use identical prompt order, clocks, power mode, predictors, and input assets for matched performance checks. The example LUT is never used for production timing.
-
-## Short numerical check
-
-Run `numerical.py` with the same model/weight/predictor/shared/rope/prompt/P1 arguments (omit output/indices/timing options). It performs one warmup and two decode calls with the existing all-layer numerical and descriptor checks, then verifies native geometry and exactly-once consumer counts. Correctness-only waits remain outside any performance run. No tolerances are relaxed.
-
-This release update does not run fixed-500 accuracy. Historical Progressive F1 78.4321% / EM 62.3167% are historical context, not newly measured results. Timing-dependent I/O admission can change generated outputs even when kernel and predictor mathematics are unchanged.
+Previous measurements are evidence, not expected constants: matched public-wrapper Block2.831, One-shot3.281 and LeanStream8.877tokens/s; completed public fixed-500 F1 78.6953%, EM62.4167%. Their protocols and distinct historical references are documented in the guide; these are historical measurements, not expected outputs.
